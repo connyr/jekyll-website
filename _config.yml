@@ -6,7 +6,13 @@ url: "http://yourdomain.com"
 
 # Build settings
 markdown: kramdown
-permalink: pretty
 author: Cornelia Rehbein
 
 paginate: 5
+
+
+permalink: /:categories/:title.
+
+category_dir: _categories
+category_blog_dir: _blog
+category_projects_dir: _projects

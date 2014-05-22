@@ -2,8 +2,8 @@
 layout: post
 title: Hello Blog World
 subtitle: Making a blog or profile website can be easy. After some researching.
-categories: 
-- news
+categories:
+- blog 
 ---
 
 Starting a Blog. A few days ago, I realized that I had dodged this topic long enough and finally forayed into the web-development scene...

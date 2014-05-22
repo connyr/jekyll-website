@@ -2,8 +2,7 @@
 layout: post
 title: "Simple Fractions Part 2" 
 categories: 
-- objective-c
-- tutorials
+- blog
 ---
 This time we will extend our existing prototype from Part 1 with more advanced functionalities.
 <!-- more -->

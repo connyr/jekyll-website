@@ -2,8 +2,7 @@
 layout: post
 title: "Simple Fractions Part 1" 
 categories: 
-- objective-c
-- tutorials
+- blog
 ---
   Let's create a program that handles calculations with fractions. We want to add, subtract, multiplicate and divide the fractions with each other. 
 <!-- more -->

@@ -2,8 +2,7 @@
 layout: post
 title: "Playing a Sound with AVAudioPlayer"
 categories: 
-- objective-c
-- snippets
+- blog
 ---
 
 How to use AVAudioPlayer and AVAudioSession to play a sound. I used this in my timer app prototype to play a sound when the timer reaches zero.

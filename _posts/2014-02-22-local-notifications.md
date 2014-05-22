@@ -2,8 +2,7 @@
 layout: post
 title: "Scheduling a Notification With Sound"
 categories: 
-- objective-c
-- snippets
+- blog
 ---
 
 Trigger a UILocalNotification with a sound after the timer has reached zero.

@@ -2,8 +2,7 @@
 layout: post
 title: "Timer Countdown in the Background"
 categories: 
-- objective-c
-- snippets
+- blog
 ---
 
 Making a Timer app slowly countdown to zero even if the app enters the background.
