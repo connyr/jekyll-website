@@ -1,5 +1,34 @@
 {% include head.html %}
-{% include navigation/navbar.html %}
-      {{ content }}
+
+
+{% include content/header.html %}
+
+<div class="content-wrapper">
+
+<!-- big screens -->
+<div class="show-for-large-up">
+
+	<header>
+		{% include navigation/navbar_sticky.html %}
+	</header>
+
+	      {{ content }}
+</div>
+
+
+<!-- small screens -->
+<div class="hide-for-large-up">
+
+<header>
+	{% include navigation/navbar_offcanvas_head.html %}
+</header>
+
+	      {{ content }}
+
+	{% include navigation/navbar_offcanvas_footer.html %}
+
+</div>
+
+<!-- footer closures -->
+
 {% include footer.html %}
-</body>
