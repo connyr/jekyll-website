@@ -170,10 +170,23 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+body{
+    font-family: 'Muli', sans-serif;
+    font-size: 2em;
+}
 
+.bold-font {
+    font-family: 'Muli', sans-serif;
+}
 
+.special-font{
+    font-family: 'Lobster', cursive;
+}
 
-
+.logo-text{
+    text-align: right;
+    height: 100%;
+}
 
 
 
