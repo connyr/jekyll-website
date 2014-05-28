@@ -1,71 +1,21 @@
 ---
 layout: default
 ---
-<div class="row article-list">
-    {% assign index = true %}
-    {% assign header = false %}
-    {% assign offset = 0 %}
-    {% for post in paginator.posts %}
-    {% assign content = post.content %}
-    {% assign rowindex = forloop.index | plus: offset | modulo: 2 %}
-    {% if header == false and paginator.page == 1 %}
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 header-post">
-          {% include preview.html %}
-        </div>
-      </div>
-      {% assign header = true%}
-      {% assign offset = 1 %}
-    {% else %}
 
-      {% if rowindex == 1 %}
-            <div class="row">
-            <div class="col-md-5 col-md-offset-1">
-               {% include preview.html %}
-            </div>
+<section class="light-section" id="recent_posts">
+    
+    {% include content/recent_posts%}
 
-      {% elsif rowindex == 0 %}
-        <div class="col-md-5">
-            {% include preview.html %}
-        </div>
-        </div>
+</section>
 
-      {% else %}
-        <div class="col-md-4 second">
-            {% include preview.html %}
-        </div>
-    {% endif %}
-  {% endif %}
-{% endfor %}
+<section class="light-section" id="recent_projects">
+    
+    {% include content/recent_projects%}
 
-{% if rowindex != 0 %}
-</div>
-{% endif %}
+</section>
 
-    </div>
-   {% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
+<section class="dark-section" id="About the Author">
+    
+    About Section
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
-</div>
-{% endif %}
-
+</section>
