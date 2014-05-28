@@ -1,0 +1,21 @@
+div #blog-content {
+    background-color: #fff;
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman';
+}
+
+div #blog-content p
+{
+    font-weight: 200;
+    font-size: 16px; 
+}
+
+div #blog-content h1,h2,h3,h4,h5{
+    font-weight: 700;
+}
+
+div #blog-content img{
+    border-style: solid;
+    border-color: #666;
+    border-width: 1px;
+}
+

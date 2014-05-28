@@ -1,0 +1,19 @@
+---
+layout: default
+single: true
+---
+
+<div>
+<article class="hentry" role="article">
+  {% include article.html %}
+  <footer>
+    <p class="meta">
+      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+    </p>
+    {% unless page.sharing == false %}
+      {% include post/sharing.html %}
+    {% endunless %}
+
+  </footer>
+</article>
+</div>

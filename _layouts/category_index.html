@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+ <h1 class="category">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+ <ul class="posts">
+{% assign index = true %}
+ {% for post in site.categories[page.category] %}
+    {% assign content = post.content %}
+    {% assign category = page.category %}
+    {% assign rowindex = forloop.index | modulo: 2 %}
+      {% if rowindex == 1 %}
+        	<div class="row">
+        	<div class="col-md-6 first">
+               {% include post/category.html %}
+        	</div>
+
+      {% elsif rowindex == 0 %}
+      	<div class="col-md-6 third">
+        	{% include post/category.html %}
+        </div>
+       	</div>
+
+      {% else %}
+        <div class="col-md-6 second">
+            {% include post/category.html %}
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% if rowindex != 0 %}
+</div>
+{% endif %}
+</ul>
