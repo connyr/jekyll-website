@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }}</title>
+    <meta name="author" content="{{ site.author }}">
+
+    {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+    <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+
+    <link rel="canonical" href="{{ canonical }}">
+    <link href="{{ root_url }}/favicon.png" rel="icon">
+    <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+  
+    <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="{{ root_url }}/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="{{ root_url }}/css/contentstyle.css"> -->
+    <!-- <link rel="stylesheet" href="{{ root_url }}/css/social-buttons.css"> -->
+    <link rel="stylesheet" href="{{ root_url }}/css/font-awesome.css">
+    <link rel="stylesheet" href="{{ root_url }}/css/style.css">
+
+    <!-- scripts -->
+    <script src="{{ root_url }}/js/modernizr-2.0.js"></script>
+    <script src="{{ root_url }}/js/jquery-1.11.0.min.js"></script>
+    <script src="{{ root_url }}/js/bootstrap.min.js"></script>
+    <script src="{{ root_url }}/js/custom.js"></script>
+
+
+</head>
+<body>
+
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->

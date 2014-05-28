@@ -1,10 +1,18 @@
-<div id="footer-widgets">
-  <div class="container">
-    {% include custom/footer_widgets.html%}
-  </div>
-</div>
+<script type="text/javascript">
+$('#nav').affix({
+      offset: {
+        top: $('header').height()
+      }
+}); 
+
+// $('#sidebar').affix({
+//       offset: {
+//         top: 200
+//       }
+// }); 
+</script>
 <div class="footer">
-  <p class="text-center"> Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}. Bootstrap and Jekyll and Love.</p>
+  <p class="text-center"> Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}. Made with Bootstrap, Jekyll and Hard Work.</p>
 </div>
 </body>
 </html>

@@ -1,22 +1,5 @@
-@font-face {
-    font-family: 'chunkfiveroman';
-    src: url('../fonts/chunkfive/chunkfive-webfont.eot');
-    src: url('../fonts/chunkfive/chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chunkfive/chunkfive-webfont.woff') format('woff'),
-         url('../fonts/chunkfive/chunkfive-webfont.ttf') format('truetype'),
-         url('../fonts/chunkfive/chunkfive-webfont.svg#chunkfiveroman') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
-}
-
-body {
-    font-family: 'Roboto', sans-serif!important;
-    font-weight: 400;
-    background-color: #fff;
-    color: #7F7F7F;
-}
-
+/* animations */
 
 @-webkit-keyframes enter_page {
   0%   { opacity: 0; }
@@ -35,9 +18,8 @@ body {
   100% { opacity: 1; }
 }
 
-
 #default-content{
-	margin-top: 1em;
+  margin-top: 1em;
   font-size: 1.5em;
     -webkit-animation: enter_page 1s;
     -moz-animation:    enter_page 1s;
@@ -45,38 +27,21 @@ body {
     animation:         enter_page 1s;
 }
 
-.thumbnail{
-	background-color:#FFF; 
-	border-color: #8BDFDB;
-	border-style: none;
-  margin:1em;
+/* content */
+
+
+body {
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+    background-color: #aaa;
+    color: #eee;
 }
 
-.header-post .thumbnail{
-  text-align: center;
-}
-
-.header-post .thumbnail h1 a {
-  font-size: 1.3em;
-}
-
-h1.category {
-  text-align: center;
-}
-
-h1.project-title a, h2.project-title a{
-  color: #7FCCC8;
-
-}
-
-.thumbnail h1 a, h2 a {
-	font-family: 'chunkfiveroman', serif;
-  font-size: 0.8em;
-}
-
-a {
+/* links */
+/*a {
     color: #FF857F;
     text-decoration: none;
+
     -moz-transition: color .2s ease-in-out;
     -webkit-transition: color .2s ease-in-out;
     -o-transition: color .2s ease-in-out;
@@ -87,70 +52,66 @@ a {
 a:hover {
     text-decoration: none;
     color: #CC3B37;
-}
+}*/
 
- .subtitle{
-  display: none;
+.color-line{
+    -webkit-linear-gradient(left, #3f3d59 0%,#3f3d59 14.28571%,#00bbe4 14.28571%,#00bbe4 28.57143%,#c35391 28.57143%,#c35391 42.85714%,#ed5936 42.85714%,#ed5936 57.14286%,#ffaa26 57.14286%,#ffaa26 71.42857%,#f1ca02 71.42857%,#f1ca02 85.71429%,#a0c546 85.71429%,#a0c546 100%);
 }
+/*header*/
 
-.navbar-brand {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 900;
-}
-
-.navbar-nav {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 400;
-}
-
-div.logo-container{
-	background-color: #8BDFDB;
-}
-
-.navbar-default .navbar-nav>li>a {
-	color: #FFF;
-}
-
-.icon-bar{
-	display: inherit;
-	text-align: right;
-	background-color: #8BDFDB; 
-}
-
-.icon-bar i{
-	font-size: 2em;
-	padding: 0.5em;
-}
-
-.brand {
+/*.brand {
   display: inherit;
   font-weight: 700;
   font-size: 3em;
-
   line-height: normal;
   text-align: center;
   margin: 0;
   padding: 10px 0 10px;
   color: #FFFFFF;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}*/
+
+
+/*show in big screens?*/
+/*.icon-bar{
+  display: none;
+}*/
+
+/*navbar*/
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+/*
+.thumbnail{
+  margin:1em;
 }
 
-article header h1{
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  color: #555;
-  margin-bottom: 20px;
+.highlight-font{
+    font-family: 'chunkfiveroman', serif;
+}*/
 
+/*content*/
+
+/*.readable-content{
+    background-color: #eee;
+    color: #111;
 }
 
-.container .jumbotron{
-  background-color: #fff;
-  border-color: #8BDFDB;
-  border-width: 3px;
-  border-style: solid;
+.fat-title{
+    font-weight: bold;
+    font-size: 2em;
+    color: #009933;
 }
+
+.border{
+    border-width: 3px;
+    border-style: solid;
+}*/
+/*
 
 .about-row {
   background-color: #fff;
@@ -184,20 +145,6 @@ article header h1{
   font-size:0.8em;
 }
 
-.navbar-default .navbar-nav>li>a{
-    color: #555;
-}
-
-.navbar-default .navbar-nav>li>a:hover{
-    color: #8BDFDB;
-}
-
-.navigate a{
-  font-family: 'chunkfiveroman', serif;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 #footer-widgets{
   background-color: #f4f4f4;
 }
@@ -209,12 +156,10 @@ div.footer{
   color: #fff;
 }
 
-
+*/
 
 @media screen and (min-width: 768px) {
-
-
-
+/*
 .subtitle{
 	text-align: center;
 	display: inherit;
@@ -265,5 +210,5 @@ div.footer{
   table-layout: fixed;
   font-size: 1.25em;
 }
-
+*/
 }
