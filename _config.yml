@@ -8,8 +8,8 @@ url: "http://connyrehbein.com"
 markdown: kramdown
 author: Cornelia Rehbein
 
-include: ['_pages']
 relative_permalinks: false
+
 
 permalink:     '/blog/:year/:title/'
 

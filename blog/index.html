@@ -1,12 +1,13 @@
 ---
-layout: fullscreen 
+layout: blog 
 ---
 
 {% for post in paginator.posts %}
 	
-	{% include posts/post_preview.html %}
+	{% include posts/post_list_preview.html %}
 
 {% endfor %}
+
 
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
@@ -24,3 +25,5 @@ layout: fullscreen
 	</ul>
 </div>
 {% endif %}
+
+</div>

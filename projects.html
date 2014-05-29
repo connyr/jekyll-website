@@ -1,0 +1,11 @@
+---
+permalink: /projects/
+layout:    default
+title:     Projects
+---
+
+{% for post in site.data.projects %}
+	
+	{% include projects/project_preview.html %}
+
+{% endfor %}

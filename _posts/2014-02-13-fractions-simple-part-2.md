@@ -5,8 +5,6 @@ categories:
 - blog
 ---
 This time we will extend our existing prototype from Part 1 with more advanced functionalities.
-<!-- more -->
-
 The source code is available on [github](https://github.com/connyr/ios-projects/tree/master/Numbers/Fractions).
 
 ###Todo
@@ -23,6 +21,7 @@ We will also implement the necessary user interface to interact with our fractio
  - Parsing input to create fractions
  - Show results
 
+<!-- more -->
 ###Extending the Logic
 
 First, let's create a method, that returns the decimal value of a fraction.
