@@ -1,4 +1,4 @@
-		<div class="thumbnail" >
+		<div class="item" >
 			
 		    <!-- post preview image? -->
 		    <div>
@@ -22,7 +22,7 @@
 					<a href="{{ post.comment_url }}"></a> {{ post.comments }} comments
 		    	</div>
 		    	<div>
-		    		<p>{{ post.excerpt }}</p>
+		    		<p>{{ post.excerpt | strip_html }}</p>
 		    		<a href="" class="btn btn-default">Read More</a>
 		    	</div>
 		    </section>

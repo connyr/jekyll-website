@@ -1,4 +1,7 @@
 <div id="nav">
+    
+{% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
+
     <nav class="navbar navbar-default nav" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -8,17 +11,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">CR</a>
+                <a class="navbar-brand" href="/index.html">CR</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
 
-                    <li><a href="{{root.url}}/">HOME</a></li>
-                    <li><a href="{{root.url}}/blog">BLOG</a></li>
-                    <li><a href="{{root.url}}/blog/categories/projects">PROJECTS</a></li>
-                    <li><a href="{{root.url}}/about">ABOUT ME</a></li>
+    <li><a {% if location == 'about' %}class="active" {% endif %}href="/about/">About</a></li>
+    <li><a {% if location == 'projects' %}class="active" {% endif %}href="/projects/">Projects</a></li>
+    <li><a {% if location == 'blog' %}class="active" {% endif %}href="/blog/">Blog</a></li>
+    <li><a {% if location == 'contact' %}class="active" {% endif %}href="/contact/">Contact</a></li>
                 
                 </ul>
             </div>
