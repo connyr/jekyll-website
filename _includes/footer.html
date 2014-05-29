@@ -1,18 +1,16 @@
 <script type="text/javascript">
-$('#nav').affix({
-      offset: {
-        top: $('header').height()
-      }
-}); 
-
-// $('#sidebar').affix({
+// $('#nav').affix({
 //       offset: {
-//         top: 200
+//         top: $('header').height()
 //       }
 // }); 
 </script>
-<div class="footer">
-  <p class="text-center"> Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}. Made with Bootstrap, Jekyll and Hard Work.</p>
-</div>
+
+<!-- footer code -->
+	<div class="footer navbar-fixed-bottom">
+	  <p class="text-center"> Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}. Made with Bootstrap, Jekyll and Hard Work.</p>
+	</div>
+
+<!-- close open tags -->
 </body>
 </html>

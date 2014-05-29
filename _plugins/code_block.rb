@@ -43,6 +43,7 @@
 #
 require './_plugins/pygments_code'
 require './_plugins/raw'
+require "jekyll-categories"
 
 module Jekyll
 

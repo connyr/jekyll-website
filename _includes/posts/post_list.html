@@ -1,0 +1,30 @@
+		<div class="thumbnail" >
+			
+		    <!-- post preview image? -->
+		    <div>
+		        <i class="fa fa-bomb"></i>
+		    </div>
+		  
+		  <!-- post preview header -->
+
+
+
+		    <section>
+		    	<h1>
+		            <a href="{{ post.url}}">
+		            {% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}
+		            </a>
+		        </h1>
+
+				<div class="meta">
+					<time datetime={{ post.date }}><i class="fa fa-calendar"></i></time>
+					<div><a href="{{ post.author_url }}"><i class="fa-fa-user"></i>  {{ post.author }}</a></div>
+					<a href="{{ post.comment_url }}"></a> {{ post.comments }} comments
+		    	</div>
+		    	<div>
+		    		<p>{{ post.excerpt }}</p>
+		    		<a href="" class="btn btn-default">Read More</a>
+		    	</div>
+		    </section>
+		      
+		</div>

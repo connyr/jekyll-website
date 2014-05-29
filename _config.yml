@@ -10,7 +10,6 @@ author: Cornelia Rehbein
 
 paginate: 5
 
-
 permalink: /:categories/:title.
 
 category_dir: _categories
