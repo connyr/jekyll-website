@@ -8,10 +8,10 @@ single: true
   {% include article.html %}
   <footer>
     <p class="meta">
-      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+      {% include posts/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
     </p>
     {% unless page.sharing == false %}
-      {% include post/sharing.html %}
+      {% include posts/sharing.html %}
     {% endunless %}
 
   </footer>

@@ -1,9 +1,0 @@
-<ul class="recent_posts">
-{% for category in site.categories %}
-     	<li>
-          <a href="{{ root_url }}/blog/categories/{{ category | first }}">
-          	{{ category | first }}</a>
-        </li>
-{% endfor %}   
-    </ul>
-

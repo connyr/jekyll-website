@@ -12,18 +12,18 @@ layout: default
       {% if rowindex == 1 %}
         	<div class="row">
         	<div class="col-md-6 first">
-               {% include post/category.html %}
+               {% include posts/category.html %}
         	</div>
 
       {% elsif rowindex == 0 %}
       	<div class="col-md-6 third">
-        	{% include post/category.html %}
+        	{% include posts/category.html %}
         </div>
        	</div>
 
       {% else %}
         <div class="col-md-6 second">
-            {% include post/category.html %}
+            {% include posts/category.html %}
         </div>
     {% endif %}
 {% endfor %}
