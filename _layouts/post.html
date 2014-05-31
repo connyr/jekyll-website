@@ -1,19 +1,31 @@
 ---
-layout: default
-single: true
+layout: blog
 ---
 
-<div>
-<article class="hentry" role="article">
-  {% include article.html %}
-  <footer>
-    <p class="meta">
-      {% include posts/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-    </p>
-    {% unless page.sharing == false %}
-      {% include posts/sharing.html %}
-    {% endunless %}
+<article>
 
-  </footer>
+		<div class="col-md-2">
+		<!-- author and sharing -->
+		<span><i class="fa fa-user"></i> By {{ site.blog_author }}</span>
+		
+			<div>
+				{% include posts/post_sharing.html %}
+			</div>
+
+		</div>
+		<div class="col-md-10">
+
+
+        <header>
+            <h2>{{site.url}}{{ page.title }}</h2>
+            <span><i class="icon-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
+            <span class="category"><i class="icon-tag"></i> {{ page.categories | category_links }}</span><br/>
+            <span class="author"><i class="icon-user"></i> {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
+        </header>
+
+        <div class="entry">{{ content }}</div>
+
+        <footer><!-- additional info --></footer>
+		</div>
+
 </article>
-</div>

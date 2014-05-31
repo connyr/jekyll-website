@@ -1,9 +1,18 @@
 {% include headers/head.html %}
-{% include headers/logo.html %}
-{% include headers/navigation.html %}
+{% include navigation/navigation.html %}
 
-    <div class="container" id="default-content">
-    	{{ content }}
-     </div>
+<div class="container-fluid" id="default-content">
+    <div class="row">
+
+    <div class="col-md-9">
+        	{{ content }}
+    </div>
+
+    <div class="col-md-3">
+    	{%  include navigation/sidebar.html%}
+    </div>
+
+	</div>
+</div>
 
 {% include footer.html %}

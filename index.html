@@ -1,31 +1,42 @@
 ---
 layout: default
 ---
+{% include headers/logo.html %}
+
+<div class="container-fluid" id="home-content">
+<hr>
+	<section>
+		<div>About</div>
+		<p>Hi, I’m Conny. I’m studying Software Engineering and love to work on App Development in my free time. <a href="/about/">Learn more about me</a>.
+		Have a look around and please don’t hesitate to contact me with any comments, questions, or just to say hello!</p>
+	</section>
+
+	<hr>
+
+	<section class="light-section" id="recent_projects">
+	    
+	    <h3>Recent Projects</h3>
+	    {% include excerpts/recent_projects.html %}
+		<div><a href="" class="btn btn-default pull-right">View Projects</a></div>
+	</section>
+
+	<hr>
 
 
-<section>
-	<div>About</div>
-	<p>Hi, I’m Conny. I’m studying Software Engineering and love to work on App Development in my free time. <a href="/about/">Learn more about me</a>.
-	Have a look around and please don’t hesitate to contact me with any comments, questions, or just to say hello!</p>
-</section>
+	<section class="light-section" id="recent_posts">
 
-<section class="light-section" id="recent_posts">
+	    <h3>Recent Posts</h3>
+	    {% include excerpts/recent_posts.html %}
+		<div><a href="" class="btn btn-default pull-right">View Blog</a></div>
 
-    <h3>Recent Posts</h3>
-    {% include excerpts/recent_posts.html %}
-	<div><a href="" class="btn btn-default">View Blog</a></div>
+	</section>
 
-</section>
+	<hr>
 
-<section class="light-section" id="recent_projects">
-    
-    <h3>Recent Projects</h3>
-    {% include excerpts/recent_projects.html %}
-	<div><a href="" class="btn btn-default">View Projects</a></div>
-</section>
+	<section class="dark-section" id="About the Author">
+	    
+	    {% include excerpts/about_excerpt.html %}
 
-<section class="dark-section" id="About the Author">
-    
-    {% include excerpts/about_excerpt.html %}
+	</section>	
 
-</section>	
+</div>
