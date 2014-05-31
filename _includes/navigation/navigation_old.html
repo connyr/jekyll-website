@@ -11,9 +11,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand logo-font" href="/index.html">
-                    {cr}
-                </a>
 
             </div>
 
@@ -27,10 +24,10 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
 
                 <ul class="nav navbar-nav">
-                    <li><a {% if location == 'index' %}class="active" {% endif %}href="/">HOME</a></li>
-                    <li><a {% if location == 'projects' %}class="active" {% endif %}href="/projects/">PROJECTS</a></li>
-                    <li><a {% if location == 'blog' %}class="active" {% endif %}href="/blog/">BLOG</a></li>
-                    <li class="visible-xs"><a {% if location == 'contact' %}class="active" {% endif %}href="/contact/">CONTACT</a></li>
+                <li><a {% if location == 'index' %}class="active" {% endif %}href="/"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a {% if location == 'projects' %}class="active" {% endif %}href="/projects/"><i class="fa fa-flask"></i>Projects</a></li>
+                    <li><a {% if location == 'blog' %}class="active" {% endif %}href="/blog/"><i class="fa fa-comment"></i>Blog</a></li>
+                    <li class="visible-xs"><a {% if location == 'contact' %}class="active" {% endif %}href="/contact/"><i class="fa fa-user"></i>CONTACT</a></li>
                 </ul>
 
             </div>
