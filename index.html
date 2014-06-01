@@ -9,13 +9,13 @@ layout: default
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
-					<h3>Show your work with this beautiful theme</h3>
-					<h1>Eyecatching Bootstrap 3 Theme.</h1>
-					<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
-					<h5>More Lorem Ipsum added here too.</h5>				
+					<h3>Hi there!</h3>
+					<h1>I'm Conny.</h1>
+					<h5>Software Engineer and App Developer</h5>
+					<h5>Take a look around and feel free to contact me and say hello!</h5>				
 				</div>
 				<div class="col-lg-8 col-lg-offset-2 himg">
-					<img src="/images/theme/browser.png" class="img-responsive">
+					<img src="/images/layout/me_crater.jpg" class="img-responsive">
 				</div>
 			</div><!-- /row -->
 	    </div> <!-- /container -->
@@ -28,22 +28,22 @@ layout: default
 	 	<div class="container">
  			<div class="row centered">
  				<div class="col-md-4">
- 					<i class="fa fa-heart-o"></i>
- 					<h4>Handsomely Crafted</h4>
- 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
- 					<p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+ 					<i class="fa fa-puzzle-piece"></i>
+ 					<h4>About Me</h4>
+ 					<p>I'm currently studying for my master's degree at the <a href="http://www.hpi.uni-potsdam.de/willkommen.html?L=1">Hasso Plattner Institute </a>in the <a href="http://www.hpi.uni-potsdam.de/hpi/organisation/stiftungsidee.html?L=1">IT Systems Engineering</a> program and about to start on my master's thesis.</p>
+ 					<p><br/><a href="/about/" class="btn btn-theme">More about Conny</a></p>
  				</div>
  				<div class="col-md-4">
- 					<i class="fa fa-flask"></i>
- 					<h4>Retina Ready</h4>
- 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
- 					<p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+ 					<i class="fa fa-rocket"></i>
+ 					<h4>Personal Projects</h4>
+ 					<p>I use a large part of my free time to work on different projects and to learn and experiment with new frameworks.</p>
+ 					<p><br/><a href="/projects/" class="btn btn-theme">View my Projects</a></p>
  				</div>
  				<div class="col-md-4">
- 					<i class="fa fa-trophy"></i>
- 					<h4>Quality Theme</h4>
- 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
- 					<p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+ 					<i class="fa fa-pencil"></i>
+ 					<h4>Blog</h4>
+ 					<p>Writing about my experiences with technology and frameworks is a great outlet for my thoughts. It also serves as a base for learning and discussions.</p>
+ 					<p><br/><a href="/blog/" class="btn btn-theme">Visit my Blog</a></p>
  				</div>		 				
 	 		</div>
 	 	</div><! --/container -->
@@ -57,136 +57,22 @@ layout: default
 
         <div class="portfolio-centered">
             <div class="recentitems portfolio">
+
+            	{% for project in site.categories['project'] %}
 				<div class="portfolio-item graphic-design">
 					<div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_09.jpg" alt="">
+					<img src="/images/projects/{{project.banner}}" alt="">
 						<div class="he-view">
 							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Graphic Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_09.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                                <h3 class="a1" data-animate="fadeInDown">{{ project.title }}</h3>
+                                <a data-rel="prettyPhoto" href="/images/projects/{{ project.banner }}" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <a href=" {{ project.url }}" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
                         	</div><!-- he bg -->
 						</div><!-- he view -->		
 					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                            
-                <div class="portfolio-item web-design">
-                    <div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_02.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Web Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_02.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-        
-                <div class="portfolio-item graphic-design">
-                    <div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_03.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Graphic Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_03.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-        
-                <div class="portfolio-item graphic-design">
-                    <div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_04.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Graphic Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_04.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                                        
-                <div class="portfolio-item books">
-                    <div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_05.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Book Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_05.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                                        
-                <div class="portfolio-item graphic-design">
-                    <div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_06.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Graphic Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_06.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                    
-                <div class="portfolio-item books">
-                    <div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_07.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Book Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_07.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                    
-                <div class="portfolio-item graphic-design">
-                    <div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_08.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Graphic Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_08.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                                        
-                <div class="portfolio-item web-design">
-                    <div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_01.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Web Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_01.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-    
-			<div class="portfolio-item books">
-                <div class="he-wrap tpl6">
-					<img src="/images/theme/portfolio/portfolio_10.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">A Book Design Item</h3>
-                                <a data-rel="prettyPhoto" href="/images/theme/portfolio/portfolio_10.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                    
+				</div><!-- end col-12 -->    
+				{% endfor %}
+
             </div><!-- portfolio -->
         </div><!-- portfolio container -->
 	 </div><!--/Portfoliowrap -->
