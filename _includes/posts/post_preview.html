@@ -1,34 +1,12 @@
-<div class="row">
-			
-		<!-- post preview image? -->
-			<div class="col-md-2">
-				<i class="fa fa-picture-o"></i>
-			</div>
-		<!-- post preview header -->
-			
-			<div class="col-md-10">
-		    <section>
 
-		    	<!-- date & author -->
-				<div class="meta">
-					<div><i class="fa fa-calendar"></i>{{ post.date }}</div>
-					<div><a href="{{ post.author_url }}"><i class="fa fa-user"></i>  {{ post.author }}</a></div>
-					<div><a href="{{ post.comment_url }}"><i class="fa fa-comment"></i>{{ post.comments }} comments</a></div>
-		    	</div>
-
-				<!-- headline -->
-		    	<h1>
-		            <a href="{{ post.url}}">
-		            {% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}
-		            </a>
-		        </h1>
-				
-				<!-- post excerpt -->
-		    	<div>
-		    		<p>{{ post.excerpt | strip_html }}</p>
-		    		<a href="" class="btn btn-default">Read More</a>
-		    	</div>
-		    	
-		    </section>
-		   </div>   
-</div>
+				{% include posts/post_header.html %}
+		 		
+		 		<!-- meta -->
+		 		<p><csmall>Posted: {{post.date}}.</csmall> | <csmall2>By: {{site.blog_author}} - {{post.comments}} Comments</csmall2></p>
+		 		
+		 		<!-- excerpt -->
+		 		<p>{{post.excerpt | strip_html }}</p>
+		 		<p><a href="{{post.url}}">[Read More]</a></p>
+		 		
+		 		<div class="hline"></div>
+		 		<div class="spacing"></div>

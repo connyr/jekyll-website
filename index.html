@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 ---
 
 	<!-- *****************************************************************************************************************
@@ -11,8 +11,10 @@ layout: default
 				<div class="col-lg-8 col-lg-offset-2">
 					<h3>Hi there!</h3>
 					<h1>I'm Conny.</h1>
-					<h5>Software Engineer and App Developer</h5>
-					<h5>Take a look around and feel free to contact me and say hello!</h5>				
+					<h3>I study Software Engineering and love to work on App Development in my free time.</h3>
+					<br>
+					<h5>Have a look around and please don’t hesitate to contact me with any comments, questions, or just to say hello!</h5>	
+					<br>		
 				</div>
 				<div class="col-lg-8 col-lg-offset-2 himg">
 					<img src="/images/layout/me_crater.jpg" class="img-responsive">
@@ -30,19 +32,19 @@ layout: default
  				<div class="col-md-4">
  					<i class="fa fa-puzzle-piece"></i>
  					<h4>About Me</h4>
- 					<p>I'm currently studying for my master's degree at the <a href="http://www.hpi.uni-potsdam.de/willkommen.html?L=1">Hasso Plattner Institute </a>in the <a href="http://www.hpi.uni-potsdam.de/hpi/organisation/stiftungsidee.html?L=1">IT Systems Engineering</a> program and about to start on my master's thesis.</p>
+ 					<p>I'm currently studying for my master's degree at the <a href="http://www.hpi.uni-potsdam.de/willkommen.html?L=1">Hasso Plattner Institute </a>in the <a href="http://www.hpi.uni-potsdam.de/hpi/organisation/stiftungsidee.html?L=1">IT Systems Engineering</a> program and am about to start on my master's thesis.</p>
  					<p><br/><a href="/about/" class="btn btn-theme">More about Conny</a></p>
  				</div>
  				<div class="col-md-4">
  					<i class="fa fa-rocket"></i>
  					<h4>Personal Projects</h4>
- 					<p>I use a large part of my free time to work on different projects and to learn and experiment with new frameworks.</p>
+ 					<p>A large part of my free time is spent working on personal projects and experimenting with new frameworks to gain more experience. </p>
  					<p><br/><a href="/projects/" class="btn btn-theme">View my Projects</a></p>
  				</div>
  				<div class="col-md-4">
  					<i class="fa fa-pencil"></i>
  					<h4>Blog</h4>
- 					<p>Writing about my experiences with technology and frameworks is a great outlet for my thoughts. It also serves as a base for learning and discussions.</p>
+ 					<p>Sometimes I write about my experiences and pitfalls with technology and frameworks as an outlet for my thoughts. It also serves as a base for learning and discussions.</p>
  					<p><br/><a href="/blog/" class="btn btn-theme">Visit my Blog</a></p>
  				</div>		 				
 	 		</div>
@@ -57,20 +59,21 @@ layout: default
 
         <div class="portfolio-centered">
             <div class="recentitems portfolio">
+            	{% for project in site.categories['project'] |limit: 5%}
+            	{% assign cellindex = forloop.index%}
 
-            	{% for project in site.categories['project'] %}
-				<div class="portfolio-item graphic-design">
-					<div class="he-wrap tpl6">
-					<img src="/images/projects/{{project.banner}}" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">{{ project.title }}</h3>
-                                <a data-rel="prettyPhoto" href="/images/projects/{{ project.banner }}" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href=" {{ project.url }}" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->    
+					{% include projects/project_preview.html %}
+
+				{% endfor %}
+
+	
+				{% assign rest = cellindex | modulo: 5%}
+				{% assign rest = 5 | minus: rest %}
+
+				{% for project in (1..rest) %}
+
+					{% include projects/project_dummy.html %}
+				
 				{% endfor %}
 
             </div><!-- portfolio -->
@@ -87,14 +90,15 @@ layout: default
 
         <div class="container">
  			<div class="row centered">
- 				{% for post in site.categories['blog'] | limit: 2 %}
- 				<div class="col-md-6">
- 					<img src="/images/post/{{post.banner}}">
- 					<h4>{{ post.title }}</h4>
+ 				{% for post in site.categories['blog'] | limit: 3 %}
+ 				<div class="col-md-4">
+ 					<!-- <img src="/images/post/{{post.banner}}"> -->
+ 					<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
  					<p>{{ post.excerpt }}</p>
  					<p><br/><a href="{{ post.url }}" class="btn btn-theme">Read More</a></p>
  				</div> 	
- 				{%  endfor %}			
+ 				{%  endfor %}		
+ 					
 	 		</div>
 	 	</div><! --/container -->
 	 </div><!--/Portfoliowrap -->

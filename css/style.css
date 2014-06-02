@@ -82,6 +82,50 @@ a:focus {
 	text-align: center
 }
 
+/*icon management*/
+
+.bgcolor-violet{
+	background-color: rgb(198,167,297);
+}
+.bgcolor-dark-blue{
+	background-color: rgb(12,87,135);
+}
+.bgcolor-light-blue{
+	background-color: rgb(134,194,218);
+}
+.bgcolor-jade-green{
+	background-color: rgb(163,213,195);
+}
+.bgcolor-light-green{
+	background-color: rgb(200,220,111);
+}
+.bgcolor-emerald-green{
+	background-color: rgb(29,178,158);
+}
+.bgcolor-lemon-yellow{
+	background-color: rgb(254,227,128);
+}
+.bgcolor-nectarine-orange{
+	background-color: rgb(253,162,109);
+}
+.bgcolor-poppy-red{
+	background-color: rgb(249,82,72);
+}
+.bgcolor-cream-white{
+	background-color: rgb(253,228,212);
+}
+
+.post-thumbnail{
+	max-width: 60px!important;
+	max-height: 60px!important;
+}
+
+.post-banner img{
+	max-height: 100px!important;
+	display: block;
+	margin: auto;
+}
+
 /*	################################################################
 	BOOTSTRAP MODIFICATIONS & TWEAKS
 ################################################################# */
@@ -256,11 +300,14 @@ a:focus {
 	display:block;
 }
 
-
 .portfolio-item .title:before {border-radius:0; display:none}
 .portfolio-item p {margin:0px 0 30px;}
 .portfolio-item h3 {margin:-10px 0 10px; font-size:16px; text-transform:uppercase;}
+.portfolio-item img {width: 100%;}
 
+.tpl6 {
+	min-height: 200px;
+}
 
 .tpl6 h3
 {

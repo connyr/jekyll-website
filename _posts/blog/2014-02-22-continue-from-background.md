@@ -1,8 +1,16 @@
 ---
 layout: post
 title: "Timer Countdown in the Background"
+
+bgcolor: bgcolor-emerald-green
+thumbnail: icons_blog-dummy.svg
+banner: icons_stopwatch.svg
+
 categories: 
 - blog
+tags:
+- ios
+- objective-c
 ---
 
 Making a Timer app slowly countdown to zero even if the app enters the background.

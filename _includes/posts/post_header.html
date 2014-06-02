@@ -1,0 +1,7 @@
+				<!-- header -->
+				<p><div class="post-banner {{post.bgcolor}}">
+					{% if post.banner %}<img class="img-responsive" src="/assets/posts/{{post.banner}}">
+					{% else %}<img class="img-responsive {{post.bgcolor}}" src="/assets/posts/{{post.thumbnail}}">
+					{% endif %}
+				</div></p>
+		 		<a href="{{post.url}}"><h3 class="ctitle">{{post.title}}</h3></a>

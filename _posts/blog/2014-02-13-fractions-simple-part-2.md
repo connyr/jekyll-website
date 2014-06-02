@@ -1,8 +1,17 @@
 ---
 layout: post
 title: "Simple Fractions Part 2" 
+
+bgcolor: bgcolor-emerald-green
+thumbnail: icons_blog-dummy.svg
+banner: icons_stopwatch.svg
+
+
 categories: 
 - blog
+tags:
+- ios
+- objective-c
 ---
 This time we will extend our existing prototype from Part 1 with more advanced functionalities.
 The source code is available on [github](https://github.com/connyr/ios-projects/tree/master/Numbers/Fractions).

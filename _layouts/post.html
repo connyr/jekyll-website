@@ -1,31 +1,20 @@
----
-layout: blog
----
+{% include headers/head.html %}
+{% include navigation/navigation.html %}
+{% include navigation/wrapper.html%}
 
-<article>
+<div class="container mtb">
+	 	<div class="row">
+	 	
+	 		<! -- SINGLE POST -->
+	 		<div class="col-lg-8">
+			{% assign post = page %}
+			{% include posts/post_single.html %}
+		 		
+			</div><! --/col-lg-8 -->
+	 		
+	 		{% include navigation/sidebar.html %}
+			
+	 	</div><! --/row -->
+	 </div><! --/container -->
 
-		<div class="col-md-2">
-		<!-- author and sharing -->
-		<span><i class="fa fa-user"></i> By {{ site.blog_author }}</span>
-		
-			<div>
-				{% include posts/post_sharing.html %}
-			</div>
-
-		</div>
-		<div class="col-md-10">
-
-
-        <header>
-            <h2>{{site.url}}{{ page.title }}</h2>
-            <span><i class="icon-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
-            <span class="category"><i class="icon-tag"></i> {{ page.categories | category_links }}</span><br/>
-            <span class="author"><i class="icon-user"></i> {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
-        </header>
-
-        <div class="entry">{{ content }}</div>
-
-        <footer><!-- additional info --></footer>
-		</div>
-
-</article>
+{% include footer.html %}

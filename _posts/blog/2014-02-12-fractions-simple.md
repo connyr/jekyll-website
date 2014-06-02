@@ -1,8 +1,17 @@
 ---
 layout: post
 title: "Simple Fractions Part 1" 
+
+bgcolor: bgcolor-emerald-green
+thumbnail: icons_blog-dummy.svg
+banner: icons_stopwatch.svg
+
+
 categories: 
 - blog
+tags:
+- ios
+- objective-c
 ---
   Let's create a program that handles calculations with fractions. We want to add, subtract, multiplicate and divide the fractions with each other. 
 <!-- more -->

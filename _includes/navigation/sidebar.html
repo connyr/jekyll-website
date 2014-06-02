@@ -1,28 +1,36 @@
-
-            <ul class="nav">
-
-                <!-- search -->
-                <li>     
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                      </form>
-                </li>
-
-                <!-- recent posts -->
-                <li id="recent-posts-sidebar">
-                    <a href="#">Recent Posts</a>
-                    <ul id>
-                        {% for post in site.posts | limit: 5 %}
-                        <li><a href="{{post.url}}">{{post.title}}</a></li>
-                        {% endfor %}
+<div class="col-lg-4">
+                <h4>Search</h4>
+                <div class="hline"></div>
+                    <p>
+                        <br/>
+                        <input type="text" class="form-control" placeholder="Search something">
+                    </p>
+                    
+                <div class="spacing"></div>
+                
+                <h4>Recent Posts</h4>
+                <div class="hline"></div>
+                <ul class="popular-posts">
+                    {% for post in site.categories['blog'] | limit:4 %}
+                        <li>
+                            
+                                <a href="{{post.url}}"><img class="post-thumbnail {{post.bgcolor}}" src="/assets/posts/{{post.thumbnail}}" alt="Popular Post"></a>
+                            
+                                <p><a href="{{post.url}}">{{post.title}}</a></p>
+                                <em>Posted on {{post.date}}</em>
+                            
+                        </li>
+                   {% endfor %}
                     </ul>
-                </li>
 
-                <!-- about -->
-                <li><a href="#">About</a>
-                    {% include info/about_short.html %}
-                </li>
-            </ul>
+                    
+                <div class="spacing"></div>
+                
+                <h4>Popular Tags</h4>
+                <div class="hline"></div>
+                    <p>
+                        {% for tag in site.tags %}
+                        <a class="btn btn-theme" href="#" role="button">{{tag | first}}</a> 
+                        {% endfor %}                    
+                    </p>
+            </div>

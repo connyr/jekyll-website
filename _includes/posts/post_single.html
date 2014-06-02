@@ -1,0 +1,12 @@
+		<! -- Blog Post 1 -->
+		{% include posts/post_header.html %}
+
+		<p><csmall>Posted: {{page.date}}</csmall> | <csmall2>By: Admin - 3 Comments</csmall2></p>
+		
+		{{ content }}
+		<div class="spacing"></div>
+
+		<h6>SHARE:</h6>
+		<p class="share">
+			{% include posts/post_sharing.html %}		 		
+		</p>
