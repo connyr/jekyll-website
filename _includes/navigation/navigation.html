@@ -16,7 +16,7 @@
           <ul class="nav navbar-nav">
             <li {% if location == 'index.html' %} class="active" {% endif %}><a href="/">HOME</a></li>
             <li {% if location == 'blog' %} class="active" {% endif %}><a href="/blog/">BLOG</a></li>
-            <li {% if location == 'projects' %} class="active" {% endif %}><a href="/projects/">PROJECTS</a></li>
+            <li {% if location == 'projects' or location == 'project' %} class="active" {% endif %}><a href="/projects/">PROJECTS</a></li>
             <li {% if location == 'about' %} class="active" {% endif %}><a href="/about/">ABOUT</a></li>
           </ul>
         </div><!--/.nav-collapse -->
