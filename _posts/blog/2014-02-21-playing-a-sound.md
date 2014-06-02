@@ -2,9 +2,8 @@
 layout: post
 title: "Playing a Sound with AVAudioPlayer"
 
-bgcolor: bgcolor-emerald-green
-thumbnail: icons_blog-dummy.svg
-banner: icons_stopwatch.svg
+bgcolor: bgcolor-jade-green
+thumbnail: icons_alarm.svg
 
 categories: 
 - blog

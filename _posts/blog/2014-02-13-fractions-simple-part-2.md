@@ -2,9 +2,8 @@
 layout: post
 title: "Simple Fractions Part 2" 
 
-bgcolor: bgcolor-emerald-green
-thumbnail: icons_blog-dummy.svg
-banner: icons_stopwatch.svg
+bgcolor: bgcolor-dark-blue
+thumbnail: icons_fraction.svg
 
 
 categories: 

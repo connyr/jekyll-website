@@ -2,7 +2,7 @@
 layout: post
 title: "Scheduling a Notification With Sound"
 
-bgcolor: bgcolor-emerald-green
+bgcolor: bgcolor-light-blue
 thumbnail: icons_sound-notification.svg
 
 categories: 

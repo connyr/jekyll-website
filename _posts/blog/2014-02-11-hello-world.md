@@ -5,7 +5,6 @@ subtitle: Making a blog or profile website can be easy. After some research.
 
 bgcolor: bgcolor-emerald-green
 thumbnail: icons_blog-dummy.svg
-banner: icons_stopwatch.svg
 
 categories: 
 - blog

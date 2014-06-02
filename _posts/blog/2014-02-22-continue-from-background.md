@@ -2,9 +2,8 @@
 layout: post
 title: "Timer Countdown in the Background"
 
-bgcolor: bgcolor-emerald-green
-thumbnail: icons_blog-dummy.svg
-banner: icons_stopwatch.svg
+bgcolor: bgcolor-light-green
+thumbnail: icons_background-refresh.svg
 
 categories: 
 - blog
