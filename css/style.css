@@ -16,13 +16,41 @@
 /*	################################################################
 	1. GENERAL STRUCTURES
 ################################################################# */
-	* { 
-		margin: 0;
-		padding: 0px;
+* { 
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+	margin:0;
+	padding:0;
 	} 
 
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+	display:block;
+}
+
+mark{
+	background-color:#ff9;
+	color:#333;
+	font-style:italic;
+	font-weight:700;
+}
+
+del{
+	text-decoration:line-through;
+}
+
+hr{
+	display:block;
+	height:1px;
+	border:0;
+	border-top:1px solid #ccc;
+	margin:1em 0;
+	padding:0;
+}
+
 body { 
-	background: #ffffff; 
+	background: #f9f9f9; 
 	margin: 0; 
 	height: 100%; 
 	color: #384452;
@@ -37,13 +65,13 @@ h1, h2, h3, h4, h5, h6 {
 
 p { 
 	padding: 0; 
-	margin-bottom: 12px; 
+	margin-bottom: 1em; 
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 14px; 
-	line-height: 24px;
+	font-size: 1.5em; 
+	line-height: 2em;
 	color: #384452; 
-	margin-top: 10px; 
+	margin-top: 0.8em; 
 }
 
 img {
@@ -119,12 +147,74 @@ a:focus {
 .post-thumbnail{
 	max-width: 60px!important;
 	max-height: 60px!important;
+
 }
 
 .post-banner img{
-	max-height: 100px!important;
-	display: block;
-	margin: auto;
+	//max-height: 100px!important;
+	height: 100%
+	display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.post-title h3{
+	color: white;
+	text-align: left;
+	font-size: 3.0em;
+}
+
+.post-list{
+}
+
+.post-list-item{
+	margin-bottom: 3em;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.project-overlay{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 3em;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.project-overlay a{
+	color: darkgray;
+
+}
+
+.sidebar{
+	margin-left: 3em;
+}
+
+.menu-row{
+	font-size: 3em!important;
+}
+
+.nav-list li{
+	list-style: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#nav-wrap {
+	height: 100%;
+
+}
+.nav-list li > a {
+		color: white!important;
+		margin: 1em;
+}
+
+.header-item{
+	height: 100%;
+}
+
+#logo-container h1{
+	color: white;
 }
 
 /*	################################################################
@@ -340,7 +430,7 @@ a:focus {
 	padding-top: 60px;
 	margin-bottom: 60px;
 	display: block;
-	text-align: center
+	text-align: center;
 }
 
 #blogwrap h3 {
@@ -419,16 +509,17 @@ a:focus {
 	color: rgb(29,178,158);
 }
 
+
+
 /*	################################################################
 	PAGE CONFIGURATIONS
 ################################################################# */
 /* General Tweaks */
 
 #blue {
-	background: rgb(29,178,158);;
-	margin-top: 60px;
-	margin-bottom: 60px;
-	padding-top: 25px;
+	background: #384452;
+	margin-top:0px;
+	padding-top: 0px;
 	padding-bottom: 25px;
 }
 

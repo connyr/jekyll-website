@@ -1,17 +1,15 @@
 
+
+
 <div class="portfolio-item graphic-design {{ project.bgcolor}}">
 
 	<div class="he-wrap tpl6">
-	<img src="/assets/posts/{{project.icon}}" alt="">
-		
-		<div class="he-view">
+		<a href=" {{ project.url }}"><img src="/assets/posts/{{project.icon}}" alt=""></a>
+	<div class="project-overlay center">
 		<a href=" {{ project.url }}">
-			<div class="bg a0" data-animate="fadeIn">
-                <h3 class="a1" data-animate="fadeInDown">{{ project.title }}</h3>
-                <p>{{ project.summary }}</p>
-                <a href=" {{ project.url }}" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-        	</div><!-- he bg -->
+			{{ project.title }}
         </a>
-		</div><!-- he view -->		
+	</div>
+
 	</div><!-- he wrap -->
 </div><!-- end col-12 -->  

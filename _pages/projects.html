@@ -24,8 +24,8 @@ title:     Projects
 	 <div id="portfoliowrap">
         <div class="portfolio-centered">
             <div class="recentitems portfolio">
-
-            	{% for project in site.categories['project'] %}
+            	
+            	{% for project in site.categories['project'] |limit: 5%}
             	{% assign cellindex = forloop.index%}
 
 					{% include projects/project_preview.html %}
@@ -33,9 +33,8 @@ title:     Projects
 				{% endfor %}
 
 	
-				{% assign rest = cellindex | modulo: 5%}
+				{% assign rest = cellindex | mod: 5%}
 				{% assign rest = 5 | minus: rest %}
-
 				{% for project in (1..rest) %}
 
 					{% include projects/project_dummy.html %}

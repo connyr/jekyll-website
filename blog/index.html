@@ -3,6 +3,7 @@ layout: blog
 title: Blog
 ---
 
+<div class="post-list">
 	{% for post in paginator.posts %}
 
 		{% include posts/post_preview.html %}
@@ -28,3 +29,4 @@ title: Blog
 	{% endif %}
 </div>
 
+</div>
