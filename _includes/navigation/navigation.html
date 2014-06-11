@@ -1,12 +1,78 @@
     <!-- Fixed navbar -->
 {% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
 
-<div id="nav-wrap" role="navigation">
+<div class="container-fluid" id="nav-container">
+
+	<div class="row text-center">
+
+		<a href="/">
+			<div class="col-xs-3 col-md-2 menu-item
+				{% if location == 'index.html' %} 
+					active
+				{% endif %}">
+				<div class="inner-menu">
+					<i class="fa fa-home"></i><br>
+					HOME
+				</div>
+			</div>
+		</a>
+
+
+		<a href="/blog/">
+			<div class="col-xs-3 col-md-2 menu-item
+				{% if location == 'blog' %} 
+					active
+				{% endif %}
+				">
+				<div class="inner-menu">
+					BLOG<br>
+					<i class="fa fa-pencil"></i>
+				</div>
+			</div>
+		</a>
+
+		
+			<div class="col-md-4 hidden-sm hidden-xs" id="logo-col">
+					{% include navigation/logo.html%}
+			</div>
+	
+
+		<a href="/projects/">
+			<div class="col-xs-3 col-md-2 menu-item
+				{% if location == 'projects' or location == 'category' %} 
+					active
+				{% endif %}">
+				<div class="inner-menu">
+					<i class="fa fa-flask"></i><br>
+					LAB
+				</div>
+			</div>
+		</a>
+
+		<a href="/about/">
+			<div class="col-xs-3 col-md-2 menu-item
+				{% if location == 'about' %} 
+					active
+				{% endif %}">
+				<div class="inner-menu">
+					ABOUT<br>
+					<i class="fa fa-user"></i>
+				</div>
+			</div>
+		</a>
+
+		</div>
+</div>
+<div class="hline"></div>
+
+
+
+<!-- <div id="nav-wrap" role="navigation">
   <h3><ul class="nav-list">
-            <li {% if location == 'index.html' %} class="active" {% endif %}><a href="/">HOME</a></li>
-            <li {% if location == 'blog' %} class="active" {% endif %}><a href="/blog/">BLOG</a></li>
+            <li {% if location == 'index.html' %} class="active" {% endif %}></li>
+            <li {% if location == 'blog' %} class="active" {% endif %}></li>
             <li {% if location == 'projects' %} class="active" {% endif %}><a href="/projects/">LAB</a></li>
             <li {% if location == 'about' %} class="active" {% endif %}><a href="/about/">ABOUT</a></li>
   </ul>
 </h3>
-</div>    
+</div>   -->  

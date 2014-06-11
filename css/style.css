@@ -8,11 +8,15 @@
 	URL: http://alvarez.is
 	
 ################################################################# */ 
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Londrina+Sketch);
+@import url(http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister);
+@import url(http://fonts.googleapis.com/css?family=Imprima);
+@import url(http://fonts.googleapis.com/css?family=Text+Me+One);
 @import url("prettyPhoto.css") screen;
 @import url("hoverex-all.css") screen;
-
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 /*	################################################################
 	1. GENERAL STRUCTURES
 ################################################################# */
@@ -59,8 +63,8 @@ body {
 	}
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
+/*	font-family: 'Raleway', sans-serif;
+	font-weight: 700;*/
 }
 
 p { 
@@ -106,6 +110,49 @@ a:focus {
 	text-shadow:none;
 	background:#2B2E31;
 }
+
+/******* self defined classes *******/
+
+#nav-container{
+	margin-bottom: 0em;
+}
+
+#nav-container a{
+	color: #333;
+}
+
+.menu-item{
+	font-size: 2em;
+	font-family: "Love Ya Like A Sister", serif;
+	min-height: 150px;
+}
+
+.menu-item.active {
+
+	background-color: rgb(134,194,218);
+	color: #eee;
+}
+
+
+.inner-menu{
+	position: relative;
+	top: 50%;
+	transform:translateY(-50%);
+	-ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+}
+
+.logo-font{
+	font-family: "Londrina Sketch", serif;
+	font-size: 4em;
+	color: rgb(134,194,218);
+}
+
+.hline {
+	border-bottom: 4px solid #dedede;
+}
+
+
 
 .centered {
 	text-align: center
@@ -327,9 +374,6 @@ a:focus {
 	margin-top: 60px;
 }
 
-.hline {
-	border-bottom: 2px solid #384452;
-}
 
 .hline-w {
 	border-bottom: 2px solid #ffffff;
