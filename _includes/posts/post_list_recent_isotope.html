@@ -11,7 +11,10 @@
  				
   					 	<div class="item col-sm-{{ 12| divided_by:postsPerRow}} ">
   					 	<!-- <div class="item"> -->
-     						{% include posts/post_preview.html %}
+	  					 	<div class="item-content">
+	  					 		{% include posts/post_preview.html %}
+	  					 	</div>
+     						
     					</div>
 					
  				{%  endfor %}		

@@ -203,10 +203,19 @@ a:focus {
 .post-list-item > .post-summary{
 }
 
-.item { }
+.item { min-width: 30%;
+	max-width: 50%;
+	margin: 0px;
+	padding: 0px;
+}
 
-.item2 {  }
-
+.item-content{
+	padding: 20px;
+	background: white;
+	border: 1px solid darkgray;
+	border-radius: 10px;
+	margin: 5px;
+}
 
 /*.post-thumbnail{
 	max-width: 60px!important;
