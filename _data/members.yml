@@ -1,0 +1,21 @@
+- title: HOME
+  url: '/'
+  icon: 'fa-home'
+  urlhints: ['index.html']
+
+
+- title: BLOG
+  url: '/blog/'
+  icon: 'fa-pencil'
+  urlhints: ['blog']
+
+- title: 'LAB'
+  url: '/projects/'
+  icon: 'fa-flask'
+  urlhints: ['projects','categories']
+
+
+- title: 'ABOUT'
+  url: '/about/'
+  icon: 'fa-user'
+  urlhints: ['about']

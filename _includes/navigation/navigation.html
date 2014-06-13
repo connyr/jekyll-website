@@ -5,68 +5,43 @@
 
 	<div class="row text-center">
 
-		<a href="/">
+{% for menu_item in site.data.members %}
+
+		<a href="{{menu_item.url}}">
+			
 			<div class="col-xs-3 col-md-2 menu-item
-				{% if location == 'index.html' %} 
+				{% if menu_item.urlhints contains location %} 
 					active
 				{% endif %}">
-				<div class="inner-menu">
-					<i class="fa fa-home"></i><br>
-					HOME
+			
+				<div class="menu-item-wrapper">
+					<div class="float-vertical">
+						<i class="fa {{menu_item.icon}}"></i><br>
+						{{menu_item.title}}
+					</div>
+
 				</div>
 			</div>
 		</a>
 
+		{% if forloop.index0 == 1 %}
 
-		<a href="/blog/">
-			<div class="col-xs-3 col-md-2 menu-item
-				{% if location == 'blog' %} 
-					active
-				{% endif %}
-				">
-				<div class="inner-menu">
-					BLOG<br>
-					<i class="fa fa-pencil"></i>
-				</div>
-			</div>
-		</a>
-
-		
-			<div class="col-md-4 hidden-sm hidden-xs" id="logo-col">
+				<div class="col-md-4 hidden-sm hidden-xs" id="logo-col">
 					{% include navigation/logo.html%}
-			</div>
-	
-
-		<a href="/projects/">
-			<div class="col-xs-3 col-md-2 menu-item
-				{% if location == 'projects' or location == 'category' %} 
-					active
-				{% endif %}">
-				<div class="inner-menu">
-					<i class="fa fa-flask"></i><br>
-					LAB
 				</div>
-			</div>
-		</a>
 
-		<a href="/about/">
-			<div class="col-xs-3 col-md-2 menu-item
-				{% if location == 'about' %} 
-					active
-				{% endif %}">
-				<div class="inner-menu">
-					ABOUT<br>
-					<i class="fa fa-user"></i>
-				</div>
-			</div>
-		</a>
+		{% endif %}
 
-		</div>
+{% endfor %}
+
+	</div>
 </div>
+
 <div class="hline"></div>
 
+{% include navigation/headline.html %}
 
-
+<div class="hline"></div>
 <!-- <div id="nav-wrap" role="navigation">
   <h3><ul class="nav-list">
             <li {% if location == 'index.html' %} class="active" {% endif %}></li>

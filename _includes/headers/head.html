@@ -5,11 +5,19 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }}</title>
+    <title>{{ site.title }} 
+            {% if page.title %}
+            {% if site.titlecase %}
+               - {{ page.title | titlecase }}
+            {% else %}
+               - {{ page.title }}
+            {% endif %}{% endif %}</title>
     <meta name="author" content="{{ site.author }}">
 
     {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+    
     <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+    
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
     <!-- http://t.co/dKP3o1e -->
@@ -22,13 +30,11 @@
     <link rel="canonical" href="{{ page.url }}" />
     <link href="{{ root_url }}/favicon.png" rel="icon">
     <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
-  
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-lightbox.min.css">
+    <link href="/bower_assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bower_assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
+    <link href="/css/style.css" rel="stylesheet"> 
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -39,8 +45,6 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <script src="/js/modernizr.js"></script>
-
 </head>
 <body>
 

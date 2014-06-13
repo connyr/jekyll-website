@@ -1,0 +1,23 @@
+	 <div id="blogwrap">
+	 	<span>RECENT POSTS</span>
+
+        <div class="container">
+  			<div id="posts" class="row">	
+				{% assign postsPerRow = 3 %}
+				{% assign numRows = 2 %}
+		
+				{% assign upperLimit = postsPerRow | times: numRows %}
+ 				{% for post in site.categories['blog'] | limit: upperLimit %}
+ 				
+  					 	<div class="item">
+     						{% include posts/post_preview.html %}
+    					</div>
+					
+ 				{%  endfor %}		
+ 					
+	 		</div>
+	 	</div><! --/container -->
+	 </div><!--/Portfoliowrap -->
+
+
+	 
