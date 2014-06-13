@@ -2,15 +2,16 @@
 	 	<span>RECENT POSTS</span>
 
         <div class="container">
-  			<div id="iso" class="row">	
+  			<div id="container" class="row js-isotope"
+  data-isotope-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
 				{% assign postsPerRow = 3 %}
 				{% assign numRows = 2 %}
 		
 				{% assign upperLimit = postsPerRow | times: numRows %}
  				{% for post in site.categories['blog'] | limit: upperLimit %}
  				
-  					 	<!-- <div class="post col-sm-{{ 12| divided_by:postsPerRow}}"> -->
-  					 	<div class="post">
+  					 	<div class="item col-sm-{{ 12| divided_by:postsPerRow}}">
+  					 	<!-- <div class="item"> -->
      						{% include posts/post_preview.html %}
     					</div>
 					

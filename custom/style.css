@@ -203,6 +203,8 @@ a:focus {
 .post-list-item > .post-summary{
 }
 
+.item { width: 30%; }
+
 
 /*.post-thumbnail{
 	max-width: 60px!important;
