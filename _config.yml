@@ -12,7 +12,7 @@ author: Cornelia Rehbein
 
 relative_permalinks: false
 
-include: ['_pages', 'bower_assets']
+include: ['_pages', 'bower_assets', 'custom']
 permalink:     '/:categories/:year/:title/'
 
 paginate:      5

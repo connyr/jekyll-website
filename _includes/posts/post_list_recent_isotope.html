@@ -2,14 +2,15 @@
 	 	<span>RECENT POSTS</span>
 
         <div class="container">
-  			<div id="posts" class="row">	
+  			<div id="iso" class="row">	
 				{% assign postsPerRow = 3 %}
 				{% assign numRows = 2 %}
 		
 				{% assign upperLimit = postsPerRow | times: numRows %}
  				{% for post in site.categories['blog'] | limit: upperLimit %}
  				
-  					 	<div class="item">
+  					 	<!-- <div class="post col-sm-{{ 12| divided_by:postsPerRow}}"> -->
+  					 	<div class="post">
      						{% include posts/post_preview.html %}
     					</div>
 					
@@ -18,6 +19,3 @@
 	 		</div>
 	 	</div><! --/container -->
 	 </div><!--/Portfoliowrap -->
-
-
-	 
