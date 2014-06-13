@@ -4,6 +4,7 @@ title: "Timer Countdown in the Background"
 
 bgcolor: bgcolor-light-green
 thumbnail: icons_background-refresh.svg
+isFeatured: yes
 
 categories: 
 - blog

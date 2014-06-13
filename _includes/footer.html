@@ -49,17 +49,29 @@
     <script src="/bower_assets/jquery/dist/jquery.min.js"></script>
     <script src="/bower_assets/bootstrap/dist/js/bootstrap.min.js"></script>
   	<script src="/bower_assets/isotope/dist/isotope.pkgd.min.js"></script>
+  	<script src="/bower_assets/isotope-fit-columns/fit-columns.js"></script>
+  	<script src="/bower_assets/packery/dist/packery.pkgd.min.js"></script>
 
 	<script type="text/javascript">  
 	$( document ).ready(function() {  
         $('.menu-item').height($('#logo-col').height()) 
+
+        var $container = $('#container');
+			// init
+			$container.isotope({
+			  // options
+			  itemSelector: '.item',
+			  layoutMode: 'masonry',
+			  columnWidth: 10,
+  			  gutter: 10
+			});
     });
 
     $( window ).resize(function() {
   		$('.menu-item').height($('#logo-col').height()) 
 	});
 
-	
+
 	</script>
 
 

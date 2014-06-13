@@ -203,7 +203,9 @@ a:focus {
 .post-list-item > .post-summary{
 }
 
-.item { width: 30%; }
+.item { }
+
+.item2 {  }
 
 
 /*.post-thumbnail{
