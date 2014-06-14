@@ -5,6 +5,7 @@ title: "Simple Fractions Part 2"
 bgcolor: bgcolor-dark-blue
 thumbnail: icons_fraction.svg
 
+isFeaturedClass: cs2
 
 categories: 
 - blog

@@ -1,5 +1,5 @@
 	 <div id="blogwrap">
-	 	<span>RECENT POSTS</span>
+	 	<h2>RECENT POSTS</h2>
 
 	<div class="container">
 		
@@ -13,7 +13,11 @@
  				{% for post in site.categories['blog'] | limit: upperLimit %}
  				
   					 	<!-- <div class="post col-sm-{{ 12| divided_by:postsPerRow}}"> -->
-  					 	<div class="post">
+  					 	<div class="post 
+							{% if post.isFeaturedClass %}
+							{{ post.isFeaturedClass }}
+							{% endif %}
+  					 	">
      						{% include posts/post_preview.html %}
     					</div>
 					
