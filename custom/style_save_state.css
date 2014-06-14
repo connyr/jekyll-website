@@ -182,57 +182,30 @@ a:focus {
 
 /******* Home Recent Posts section *******/
 
-/* Default tags and Bootstrap classes */
- 
-body {
-    font-family: 'PT Sans Caption', sans-serif;
-	color: #000099;
-	margin: 0;
-	padding: 50px 0;
+
+.post-list-item{
 }
- 
-.lead { padding: 40px 0; }
- 
- 
- 
-/* Posts */
- 
-#posts { margin: 30px auto 0; }
-.post {
-	margin: 0 0 50px;
-	text-align: center;
-	width: 280px;
+
+.post-list-item > .post-banner{
+	background-color: rgb(134,194,218);	
 }
-.post.cs2 { width: 610px; }
-.post img { width: 100%; }
- 
- 
- 
-/* Large desktop */
- 
-@media (min-width: 1200px) {
-	.container > #posts .post { width: 255px; }
-	.container > #posts .post.cs2 { width: 560px; }
+
+
+
+.icon-image{
+	display: block;
+	margin: auto;
 }
- 
- 
- 
-/* Portrait tablet to landscape and desktop */
- 
-@media (min-width: 768px) and (max-width: 979px) {
-	.container-fluid > #posts .post { width: 280px; }
-	.container-fluid > #posts .post.cs2 { width: 610px; }
-	.container > #posts .post { width: 337px; }
-	.container > #posts .post.cs2 { width: 100%; }
+
+.post-list-item > .post-title{
+
 }
- 
- 
- 
-/* Landscape phone to portrait tablet */
- 
-@media (max-width: 767px) {
-	body { padding: 50px 20px; }
-	.post, .post.cs2 { width: 100%; }
+
+.post-list-item > .post-meta{
+
+}
+
+.post-list-item > .post-summary{
 }
 
 /*.post-thumbnail{
