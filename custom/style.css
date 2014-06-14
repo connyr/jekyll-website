@@ -275,7 +275,13 @@ a:focus {
 
 }
 
+.combo-content{
+	background-color: rgb(198,167,297);
+}
 
+.hexagon-image{
+	display: initial;
+}
 /******* Home Recent Posts section *******/
 
 
