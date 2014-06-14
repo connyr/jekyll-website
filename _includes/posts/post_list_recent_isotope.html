@@ -1,18 +1,13 @@
 	 <div id="blogwrap">
-	 	<h2>RECENT POSTS</h2>
+	 	<h3 class="centered">RECENT POSTS</h3>
 
 	<div class="container-fluid">
 		
 		<div id="posts">
-
-
-				{% assign postsPerRow = 3 %}
-				{% assign numRows = 2 %}
 		
-				{% assign upperLimit = postsPerRow | times: numRows %}
+				{% assign upperLimit = 5 %}
  				{% for post in site.categories['blog'] | limit: upperLimit %}
  				
-  					 	<!-- <div class="post col-sm-{{ 12| divided_by:postsPerRow}}"> -->
   					 	<div class="post 
 
 							{% if post.isFeaturedClass %}

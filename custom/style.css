@@ -31,10 +31,6 @@
 	padding:0;
 	} 
 
-.container {
-  padding-left:0!important; padding-right:0!important;
-}
-
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
 	display:block;
 }
@@ -109,12 +105,21 @@ a:focus {
 ::-moz-selection  {
 	color: #fff;
 	text-shadow:none;
-	background:#2B2E31;
+	background-color: rgb(12,87,135);
 }
 ::selection {
 	color: #fff;
 	text-shadow:none;
-	background:#2B2E31;
+	background-color: rgb(12,87,135);
+}
+
+
+.float-vertical{
+	position: relative;
+	top: 50%;
+	transform:translateY(-50%);
+	-ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
 }
 
 /******* Navigation *******/
@@ -142,17 +147,9 @@ a:focus {
 }
 
 .menu-item-wrapper{
-	height: 100%;
+
 	background-color: #f7f7f7;
-}
-
-
-.float-vertical{
-	position: relative;
-	top: 50%;
-	transform:translateY(-50%);
-	-ms-transform: translateY(-50%); /* IE 9 */
-    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+	height: 100%;
 }
 
 .logo-font{
@@ -180,13 +177,25 @@ a:focus {
 	color: #b3b3b3;
 }
 
-/******* Home Recent Posts section *******/
+/******* Content *******/
+
+.content-container{
+	margin: 5% 5%;
+}
+
+/******* Recent posts and projects page *******/
+
+#blogwrap {
+	display: block;
+	text-align: center;
+}
+
+#blogwrap h3 {
+	margin-bottom: 25px;
+	font-family: "Imprima", sans-serif;
+}
 
 /* Default tags and Bootstrap classes */
- 
-.lead { padding: 40px 0; }
- 
- 
  
 /* Posts */
  
@@ -215,8 +224,8 @@ a:focus {
 /* Portrait tablet to landscape and desktop */
  
 @media (min-width: 768px) and (max-width: 979px) {
-	.container-fluid > #posts .post { width: 280px; }
-	.container-fluid > #posts .post.cs2 { width: 610px; }
+	.container-fluid > #posts .post { width: 45%; }
+	.container-fluid > #posts .post.cs2 { width: 100%; }
 	.container > #posts .post { width: 45%; }
 	.container > #posts .post.cs2 { width: 100%; }
 }
@@ -224,7 +233,7 @@ a:focus {
 /* Landscape phone to portrait tablet */
  
 @media (max-width: 767px) {
-	body { padding: 50px 20px; }
+	.content-container{	margin: 5% 0px; }
 	.post, .post.cs2 { width: 100%; }
 }
 
@@ -236,6 +245,10 @@ a:focus {
 	display: inline-block;
     vertical-align: middle;
     float: none;
+}
+
+.post-item-content{
+	padding: 0px 10px;
 }
 
 .post-title h3{
@@ -260,7 +273,7 @@ a:focus {
 }
 
 /*icon management*/
-
+/*
 .bgcolor-violet{
 	background-color: rgb(198,167,297);
 }
@@ -290,7 +303,7 @@ a:focus {
 }
 .bgcolor-cream-white{
 	background-color: rgb(253,228,212);
-}
+}*/
 
 .project-overlay{
 	position: absolute;
@@ -304,7 +317,7 @@ a:focus {
 	color: darkgray;
 
 }
-
+/*
 .sidebar{
 	margin-left: 3em;
 }
@@ -334,7 +347,32 @@ a:focus {
 
 #logo-container h1{
 	color: white;
+}*/
+
+#footerwrap {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background: #384452;
 }
+
+#footerwrap p {
+	color: #bfc9d3;
+}
+
+#footerwrap h4 {
+	color: white;
+}
+
+#footerwrap i {
+	font-size: 30px;
+	color: #bfc9d3;
+	padding-right: 25px;
+}
+
+#footerwrap i:hover {
+	color: rgb(29,178,158);
+}
+
 
 /*	################################################################
 	BOOTSTRAP MODIFICATIONS & TWEAKS
@@ -545,19 +583,8 @@ a:focus {
 	text-align:center;
 }
 
-/*
-#blogwrap {
-	padding-top: 60px;
-	margin-bottom: 60px;
-	display: block;
-	text-align: center;
-}
 
-#blogwrap h3 {
-	margin-bottom: 25px;
-}
 
-*/
 
 /* Testimonials Wrap */
 
@@ -597,31 +624,6 @@ a:focus {
 */
 
 /* Footer */
-
-
-#footerwrap {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	background: #384452;
-}
-
-#footerwrap p {
-	color: #bfc9d3;
-}
-
-#footerwrap h4 {
-	color: white;
-}
-
-#footerwrap i {
-	font-size: 30px;
-	color: #bfc9d3;
-	padding-right: 25px;
-}
-
-#footerwrap i:hover {
-	color: rgb(29,178,158);
-}
 
 
 

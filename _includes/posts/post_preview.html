@@ -1,20 +1,24 @@
 <div class="post-list-item">
-	<div class="post-banner">
+	<div class="post-banner"><a href="{{post.url}}">
 		{% if post.banner %}<img class="img-responsive icon-image " src="/assets/posts/{{post.banner}}">
 		{% else %}<img class="img-responsive icon-image" src="/assets/posts/{{post.thumbnail}}">
 		{% endif %}
+	</a></div>
+	<div class="post-item-content">
+		
+		<div class="post-title">
+			<a href="{{post.url}}"><h3>{{post.title}}</h3></a>
 		</div>
 
-	<div class="post-title">
-		<a href="{{post.url}}"><h3>{{post.title}}</h3></a>
+		<div class="post-meta">
+			<p><csmall>Posted: {{post.date}}.</csmall> | <csmall2>By: {{site.blog_author}} - {{post.comments}} Comments</csmall2></p>
 		</div>
 
-	<div class="post-meta">
-		<p><csmall>Posted: {{post.date}}.</csmall> | <csmall2>By: {{site.blog_author}} - {{post.comments}} Comments</csmall2></p>
+		<div class="post-summary">
+			<p>{{post.excerpt | strip_html }}</p>
+			<p><a href="{{post.url}}">[Read More]</a></p>
 		</div>
 
-	<div class="post-summary">
-		<p>{{post.excerpt | strip_html }}</p>
-		<p><a href="{{post.url}}">[Read More]</a></p>
-		</div>
+	</div>
+	
 </div>
