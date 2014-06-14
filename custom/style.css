@@ -441,8 +441,8 @@ a:focus {
 /*	################################################################
 	SITE WRAPS
 ################################################################# */
-
 /*
+
 #headerwrap {
 	background-color: rgb(29,178,158);;
 	min-height: 550px;
@@ -476,7 +476,7 @@ a:focus {
 	font-size: 60px;
 	padding: 15px;
 }
-
+*/
 
 #portfoliowrap {
 	padding-top: 60px;
@@ -528,7 +528,7 @@ a:focus {
 	text-align:center;
 }
 
-
+/*
 #blogwrap {
 	padding-top: 60px;
 	margin-bottom: 60px;
