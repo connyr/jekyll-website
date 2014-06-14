@@ -1,24 +1,29 @@
 	 <div id="blogwrap">
-	 	<span>RECENT POSTS</span>
+	 	<h2>RECENT POSTS</h2>
 
-        <div class="container">
-  			<div id="container" class="row isotope">
+	<div class="container">
+		
+		<div id="posts">
+
+
 				{% assign postsPerRow = 3 %}
 				{% assign numRows = 2 %}
 		
 				{% assign upperLimit = postsPerRow | times: numRows %}
  				{% for post in site.categories['blog'] | limit: upperLimit %}
  				
-  					 	<div class="item col-sm-{{ 12| divided_by:postsPerRow}} ">
-  					 	<!-- <div class="item"> -->
-	  					 	<div class="item-content">
-	  					 		{% include posts/post_preview.html %}
-	  					 	</div>
-     						
+  					 	<!-- <div class="post col-sm-{{ 12| divided_by:postsPerRow}}"> -->
+  					 	<div class="post 
+							{% if post.isFeaturedClass %}
+							{{ post.isFeaturedClass }}
+							{% endif %}
+  					 	">
+     						{% include posts/post_preview.html %}
     					</div>
 					
  				{%  endfor %}		
- 					
-	 		</div>
+
+	 	</div>
+
 	 	</div><! --/container -->
 	 </div><!--/Portfoliowrap -->

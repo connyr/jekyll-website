@@ -17,6 +17,6 @@
     "commit": "ba380fb3d0f89cd25908d1f7e5a90ecdfcb955e1"
   },
   "_source": "git://github.com/desandro/get-size.git",
-  "_target": ">=1 <2",
+  "_target": ">=1.1.4 <2.0",
   "_originalSource": "desandro/get-size"
 }
