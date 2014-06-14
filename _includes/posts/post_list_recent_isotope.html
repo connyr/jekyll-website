@@ -1,5 +1,3 @@
-	 <div id="blogwrap">
-	 	<h3 class="centered">RECENT POSTS</h3>
 
 	<div class="container-fluid">
 		
@@ -8,12 +6,12 @@
 				{% assign upperLimit = 5 %}
  				{% for post in site.categories['blog'] | limit: upperLimit %}
  				
-  					 	<div class="post 
-
-							{% if post.isFeaturedClass %}
-							{{ post.isFeaturedClass }}
-							{% endif %}
-  					 	">
+ 						{% if post.isFeaturedClass %}
+						<div class="post cs2">
+							{% else %}
+						<div class="post">
+						{% endif %}
+  					 	
      						{% include posts/post_preview.html %}
     					</div>
 					
@@ -21,5 +19,4 @@
 
 	 	</div>
 
-	 	</div><! --/container -->
-	 </div><!--/Portfoliowrap -->
+	</div><! --/container -->

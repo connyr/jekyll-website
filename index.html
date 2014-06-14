@@ -4,16 +4,24 @@ title: Home
 pagetitle: 'Recent posts and projects'
 ---
 	<div class="container-fluid content-container">
-	<!-- *****************************************************************************************************************
-	 HEADERWRAP
-	 ***************************************************************************************************************** -->
 
-		{% include posts/post_list_recent_isotope.html %}
+	 <!-- Posts -->
+
+	 <div id="blog-wrap">
+	 	<h3 class="centered topic-header">RECENT POSTS</h3>
+
+			{% include posts/post_list_recent_isotope.html %}
+
+	</div>
 	 
-	<!-- *****************************************************************************************************************
-	 PORTFOLIO SECTION
-	 ***************************************************************************************************************** -->
+	<!-- Projects -->
 
+	 <div id="projects-wrap">
+	 	<h3 class="centered topic-header">RECENT PROJECTS</h3>
+
+			{% include projects/projects_list_recent_test.html %}
+			
+	</div>
 
 	<!-- *****************************************************************************************************************
 	 SERVICE LOGOS
