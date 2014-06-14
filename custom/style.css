@@ -195,17 +195,21 @@ a:focus {
 .post {
 	margin: 0 0 50px;
 	text-align: center;
-	width: 280px;
+	width: 30%;
+	background: white;
+	border: 2px solid #eee;
 }
 
-.post.cs2 { width: 610px; }
+.post.cs2 { 
+	width: 60%; 
+}
 /*.post img { width: 100%; }*/
  
 /* Large desktop */
  
 @media (min-width: 1200px) {
-	.container > #posts .post { width: 255px; }
-	.container > #posts .post.cs2 { width: 560px; }
+	.container > #posts .post { width: 24%; }
+	.container > #posts .post.cs2 { width: 50%; }
 }
  
 /* Portrait tablet to landscape and desktop */
@@ -213,7 +217,7 @@ a:focus {
 @media (min-width: 768px) and (max-width: 979px) {
 	.container-fluid > #posts .post { width: 280px; }
 	.container-fluid > #posts .post.cs2 { width: 610px; }
-	.container > #posts .post { width: 337px; }
+	.container > #posts .post { width: 45%; }
 	.container > #posts .post.cs2 { width: 100%; }
 }
 
@@ -224,18 +228,8 @@ a:focus {
 	.post, .post.cs2 { width: 100%; }
 }
 
-.item { min-width: 30%;
-	max-width: 50%;
-	margin: 0px;
-	padding: 0px;
-}
-
-.item-content{
-	padding: 20px;
-	background: white;
-	border: 1px solid darkgray;
-	border-radius: 10px;
-	margin: 5px;
+.post-banner{
+	background-color: rgb(134,194,218);
 }
 
 .post-banner img{
@@ -254,9 +248,7 @@ a:focus {
 }
 
 .post-list-item{
-	margin-bottom: 3em;
-	margin-left: 2em;
-	margin-right: 2em;
+
 }
 
 
