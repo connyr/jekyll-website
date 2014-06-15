@@ -31,17 +31,19 @@
                 $(element).find('.hex_r').append('<div class="hex_inner"></div>');
 
                 $(element).find('.hex_inner').append('<div class="inner_span"><div class="inner-text"></div></div>');
-                $(element).find('.hex_inner').append('<div class="inner_img"></div>');
+                $(element).find('.hex_inner').append('<img style="display:block" class="inner_img">');
 
                 num = 0;
                 
                 $(element).find('.comb').each(function(){
                     num = num + 1;
-                    var image = $(this).find('img').attr('src');
+                    var image = this.getElementsByTagName('icon')[0].innerText
+                    var backgroundClass =this.getElementsByTagName('color')[0].innerText
+    
                     var css = 'url("'+image+'") ';
-                    
-                    $(this).find('.hex_inner').attr('style', 'background-color: red ');
-                    $(this).find('.inner_img').attr('style', 'background-image: '+css);
+
+                    $(this).find('.hex_inner').addClass(backgroundClass);
+                    $(this).find('.inner_img').attr('src', image);
 
                     
                     if($(this).find('span').length > 0){
@@ -51,7 +53,7 @@
                     };
                 });
                 
-                $(element).find('img, span, .inner_span').hide();
+                //$(element).find('img, span, .inner_span').hide();
             }
             
             /**

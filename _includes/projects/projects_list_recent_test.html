@@ -4,75 +4,28 @@
         <h3>LATEST EXPERIMENTS</h3>
 
         <div class="honeycombs">
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-			<div class="comb">
-				<div class="combo-content"><img src="/assets/posts/icons_alarm.svg" />
-				</div>
-			</div>
-	</div>
+			    {% assign upperlimit = 6%}
+            	{% for project in site.categories['project'] |limit: upperLimit %}
+
+					{% include projects/project_preview_test.html %}
+
+				{% endfor %}
+
+				{% assign upperlimit = 6%}
+            	{% for project in site.categories['project'] |limit: upperLimit %}
+
+					{% include projects/project_preview_test.html %}
+
+				{% endfor %}
+
+
+				{% assign upperlimit = 6%}
+            	{% for project in site.categories['project'] |limit: upperLimit %}
+
+					{% include projects/project_preview_test.html %}
+
+				{% endfor %}
+		</div>
 	 </div><!--/Portfoliowrap -->
 	 
 	 

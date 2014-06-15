@@ -280,7 +280,7 @@ a:focus {
 }
 
 .hexagon-image{
-	display: initial;
+		display: block;
 }
 /******* Home Recent Posts section *******/
 
@@ -288,7 +288,7 @@ a:focus {
 
 
 /*icon management*/
-/*
+
 .bgcolor-violet{
 	background-color: rgb(198,167,297);
 }
@@ -318,7 +318,7 @@ a:focus {
 }
 .bgcolor-cream-white{
 	background-color: rgb(253,228,212);
-}*/
+}
 
 .project-overlay{
 	position: absolute;
