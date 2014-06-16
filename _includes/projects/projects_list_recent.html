@@ -1,30 +1,23 @@
 
 
-	 <div id="portfoliowrap">
-        <h3>LATEST EXPERIMENTS</h3>
 
-        <div class="portfolio-centered">
-            <div class="recentitems portfolio">
+<div class="section-content">
+    <div class="honeycombs">
+		    
+		    {% assign upperlimit = 6 %}
+		    {% assign pIndex = 1 %}
 
-            	{% assign upperlimit = 6%}
-            	{% for project in site.categories['project'] |limit: upperLimit %}
+        	{% for project in site.categories['project'] |limit: upperLimit %}
+        	{% assign pIndex = pIndex| plus:1 %}
 
-					{% include projects/project_preview.html %}
+				{% include projects/project_preview.html %}
 
-				{% endfor %}
-<!-- 
-	
-				{% assign rest = cellindex | mod: 5%}
-				{% assign rest = 5 | minus: rest %}
+			{% endfor %}
 
-				{% for project in (1..rest) %}
-
-					
+			{% for project in (pIndex..upperlimit) %}
 				
-				{% endfor %} -->
-
-            </div><!-- portfolio -->
-        </div><!-- portfolio container -->
-	 </div><!--/Portfoliowrap -->
-	 
-	 
+				{% include projects/project_dummy.html %}
+			
+			{% endfor %}
+	</div>
+</div>

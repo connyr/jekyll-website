@@ -183,26 +183,41 @@ a:focus {
 
 /******* Content *******/
 
+
 .content-container{
-	margin: 5% 5%;
+	
 }
 
+
+
+/* Header */
+
 .topic-header{
-	margin-bottom: 25px;
+	padding-bottom: 2em;
+	padding-top: 2em;
 	font-family: "Love Ya Like A Sister", sans-serif;
 }
 
-/******* Recent posts and projects page *******/
+	/* section with title */
+.section-container{
+	padding: 5% 5%;
+}
+
+
+.section-content{
+	margin: 5em auto 0;
+}
+
+	/******* Recent posts *******/
 
 #blog-wrap {
 	display: block;
 	text-align: center;
+
 }
  
-/******* post layouts *******/
- 
+			/******* post layouts *******/
 
-#posts { margin: 30px auto 0; }
 
 .post {
 	margin: 0 0 50px;
@@ -240,8 +255,7 @@ a:focus {
 }
 
 
-
-/******* Recent posts and projects page *******/
+			/******* post style *******/
 
 
 .post-banner{
@@ -275,13 +289,15 @@ a:focus {
 
 }
 
-.combo-content{
-	background-color: rgb(198,167,297);
+
+	/******* Recent projects *******/
+
+#projects-wrap{
+	margin-top: 4em;
+	background: white;
+	border-top: 5px dashed #ccc;
 }
 
-.hexagon-image{
-		display: block;
-}
 /******* Home Recent Posts section *******/
 
 

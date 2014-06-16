@@ -3,23 +3,24 @@ layout: home
 title: Home
 pagetitle: 'Recent posts and projects'
 ---
-	<div class="container-fluid content-container">
+<div class="container-fluid content-container">
 
 	 <!-- Posts -->
 
-	 <div id="blog-wrap">
+	 <div id="blog-wrap" class="section-container">
 	 	<h3 class="centered topic-header">RECENT POSTS</h3>
 
 			{% include posts/post_list_recent_isotope.html %}
 
 	</div>
-	 
-	<!-- Projects -->
 
-	 <div id="projects-wrap">
+</div>
+	
+	<!-- Projects -->		
+	 <div id="projects-wrap" class="section-container">
 	 	<h3 class="centered topic-header">RECENT PROJECTS</h3>
 
-			{% include projects/projects_list_recent_test.html %}
+			{% include projects/projects_list_recent.html %}
 			
 	</div>
 
@@ -37,4 +38,3 @@ pagetitle: 'Recent posts and projects'
 	 TESTIMONIALS
 	 ***************************************************************************************************************** -->
 
-</div>
