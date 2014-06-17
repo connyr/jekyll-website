@@ -31,20 +31,24 @@
                 $(element).find('.hex_r').append('<div class="hex_inner"></div>');
 
                 $(element).find('.hex_inner').append('<div class="inner_span"><div class="inner-text"></div></div>');
-                $(element).find('.hex_inner').append('<img style="display:block" class="inner_img">');
+                $(element).find('.hex_inner').append('<a class="inner_anchor"><img style="display:block" class="inner_img"></a>');
 
                 num = 0;
                 
                 $(element).find('.comb').each(function(){
                     num = num + 1;
                     var image = this.getElementsByTagName('icon')[0].innerText
-                    var backgroundClass =this.getElementsByTagName('color')[0].innerText
+                    var backgroundClass = this.getElementsByTagName('color')[0].innerText
     
                     var css = 'url("'+image+'") ';
 
                     $(this).find('.hex_inner').addClass(backgroundClass);
                     $(this).find('.inner_img').attr('src', image);
-
+                    
+                    var reference = this.getElementsByTagName('reference');
+                    if (reference.length > 0) {
+                        $(this).find('.inner_anchor').attr('href', reference[0].innerText);
+                    };
                     
                     if($(this).find('span').length > 0){
                         $(this).find('.inner_span .inner-text').html($(this).find('span').html());

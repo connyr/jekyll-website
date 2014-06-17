@@ -1,12 +1,7 @@
 
-icon {
+icon, color, reference {
 	display: none;
 }
-
-color {
-	display: none;
-}
-
 
 .honeycombs{
 	position: relative;
@@ -90,7 +85,5 @@ color {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	
-	cursor: pointer;
 	
 }
