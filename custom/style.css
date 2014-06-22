@@ -279,8 +279,7 @@ a:focus {
 
 	/******* Recent projects *******/
 
-#projects-wrap{
-	margin-top: 4em;
+.white-dashed-section{
 	background: white;
 	border-top: 5px dashed #ccc;
 }
