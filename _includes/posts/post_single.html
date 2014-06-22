@@ -1,12 +1,46 @@
-		<! -- Blog Post 1 -->
-		{% include posts/post_header.html %}
+<div>
+    <div class="post-banner">
+        <a href="{{post.url}}">
+        {% if post.banner %}<img class="img-responsive icon-image " src="/assets/posts/{{post.banner}}">
+        {% else %}<img class="img-responsive icon-image" src="/assets/posts/{{post.thumbnail}}">
+        {% endif %}
+        </a>
+    </div>
 
-		<p><csmall>Posted: {{page.date}}</csmall> | <csmall2>By: Admin - 3 Comments</csmall2></p>
-		
-		{{ content }}
-		<div class="spacing"></div>
+    <div class="post-item-content">
 
-		<h6>SHARE:</h6>
-		<p class="share">
-			{% include posts/post_sharing.html %}		 		
-		</p>
+<!--         <div class="post-title">
+            <a href="{{post.url}}">
+                <h3>{{post.title}}</h3>
+            </a>
+        </div> -->
+
+        <div class="post-meta">
+            <p>
+                <csmall>Posted: {{post.date}}.</csmall>|
+                <csmall2>By: {{site.blog_author}} - {{post.comments}} Comments</csmall2>
+            </p>
+        </div>
+
+        <div class="post-content">
+            {{content}}
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<p>
+    <csmall>Posted: {{page.date}}</csmall>|
+    <csmall2>By: Admin - 3 Comments</csmall2>
+</p>
+
+{{ content }}
+<div class="spacing"></div>
+
+<h6>SHARE:</h6>
+<p class="share">
+    {% include posts/post_sharing.html %}
+</p>

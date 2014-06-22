@@ -48,6 +48,7 @@ body {
 	height: 100%;
 	color: #384452;
 	font-family: 'Lato', sans-serif;
+    letter-spacing: 0.5px;
 	font-weight: 400;
 	}
 
@@ -159,8 +160,7 @@ a:focus {
 }
 
 .header-content{
-	padding-top: 3.5em;
-	padding-bottom: 3.5em;
+	padding: 3.5em 0.8em;
 }
 
 .header-content > h2 > span {

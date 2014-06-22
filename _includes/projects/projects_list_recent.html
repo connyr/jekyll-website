@@ -3,7 +3,7 @@
 
 <div class="section-content">
     <div class="honeycombs">
-		    
+
 		    {% assign upperlimit = 6 %}
 		    {% assign pIndex = 1 %}
 
@@ -12,12 +12,6 @@
 
 				{% include projects/project_preview.html %}
 
-			{% endfor %}
-
-			{% for project in (pIndex..upperlimit) %}
-				
-				{% include projects/project_dummy.html %}
-			
 			{% endfor %}
 	</div>
 </div>

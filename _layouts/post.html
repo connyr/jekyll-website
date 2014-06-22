@@ -1,20 +1,10 @@
 {% include headers/head.html %}
 {% include navigation/navigation.html %}
 
+	{% assign post = page %}
 
-<div class="container mtb">
-	 	<div class="row">
-	 	
-	 		<! -- SINGLE POST -->
-	 		<div class="col-lg-8">
-			{% assign post = page %}
-			{% include posts/post_single.html %}
-		 		
-			</div><! --/col-lg-8 -->
-	 		
-	 		{% include navigation/sidebar.html %}
-			
-	 	</div><! --/row -->
-	 </div><! --/container -->
+    <div class="container">
+	   {% include posts/post_single.html %}
+    </div>
 
 {% include footer.html %}
