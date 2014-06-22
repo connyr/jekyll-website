@@ -1,16 +1,17 @@
 ---
-layout: blog 
+layout: home
 title: Blog
 pagetitle: 'Thoughts on coding and development'
 ---
 
-<div class="post-list">
-	{% for post in paginator.posts %}
+<div class="container-fluid content-container">
 
-		{% include posts/post_preview.html %}
+	 <!-- Posts -->
 
-	{% endfor %}
+	 <div id="blog-wrap" class="section-container">
+	 	<h3 class="centered topic-header"><i class="fa fa-pencil"></i> BLOG </h3>
 
+			{% include posts/all_posts.html %}
 
 	<div class="center">
 	<!-- paginator links -->
@@ -28,6 +29,9 @@ pagetitle: 'Thoughts on coding and development'
 	{% endif %}
 		</ul>
 	{% endif %}
+
+	</div>
+
 </div>
 
 </div>

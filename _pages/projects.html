@@ -7,41 +7,15 @@ title:     Projects
 	<!-- *****************************************************************************************************************
 	 TITLE & CONTENT
 	 ***************************************************************************************************************** -->
-
-	 <div class="container mtb">
-	 	<div class="row">
-		 	<div class="col-lg-8 col-lg-offset-2 centered">
-		 		<h2>Some of my personal projects</h2>
-		 		<br>
-		 		<div class="hline"></div>
-		 	</div>
-	 	</div>
-	 </div><! --/container -->
 	 
 	<!-- *****************************************************************************************************************
 	 PORTFOLIO SECTION
 	 ***************************************************************************************************************** -->
-	 <div id="portfoliowrap">
-        <div class="portfolio-centered">
-            <div class="recentitems portfolio">
-            	
-            	{% for project in site.categories['project'] |limit: 5%}
-            	{% assign cellindex = forloop.index%}
+	 <div id="projects-wrap" class="section-container">
+	 	<h3 class="centered topic-header">RECENT PROJECTS</h3>
 
-					{% include projects/project_preview.html %}
+			{% include projects/projects_list_recent.html %}
+			
+	</div>
 
-				{% endfor %}
-
-	
-				{% assign rest = cellindex | mod: 5%}
-				{% assign rest = 5 | minus: rest %}
-				{% for project in (1..rest) %}
-
-					{% include projects/project_dummy.html %}
-				
-				{% endfor %}
-
-            </div><!-- portfolio -->
-        </div><!-- portfolio container -->
-	 </div><!--/Portfoliowrap -->
 	 

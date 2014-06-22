@@ -6,8 +6,8 @@
 	Project Name: SOLID - Bootstrap 3 Theme
 	Version: 1.0
 	URL: http://alvarez.is
-	
-################################################################# */ 
+
+################################################################# */
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Londrina+Sketch);
 @import url(http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister);
@@ -22,14 +22,14 @@
 /*	################################################################
 	1. GENERAL STRUCTURES
 ################################################################# */
-* { 
+* {
 	border:0;
 	font-size:100%;
 	font:inherit;
 	vertical-align:baseline;
 	margin:0;
 	padding:0;
-	} 
+	}
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
 	display:block;
@@ -55,10 +55,10 @@ hr{
 	padding:0;
 }
 
-body { 
-	background: #f7f7f7; 
-	margin: 0; 
-	height: 100%; 
+body {
+	background: #f7f7f7;
+	margin: 0;
+	height: 100%;
 	color: #384452;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
@@ -69,15 +69,15 @@ h1, h2, h3, h4, h5, h6 {
 	//font-weight: 700;
 }
 
-p { 
-	padding: 0; 
-	margin-bottom: 1em; 
+p {
+	padding: 0;
+	margin-bottom: 1em;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 1.5em; 
+	font-size: 1.5em;
 	line-height: 2em;
-	color: #384452; 
-	margin-top: 0.8em; 
+	color: #384452;
+	margin-top: 0.8em;
 }
 
 img {
@@ -85,10 +85,10 @@ img {
 	max-width: 100%;
 }
 
-a { 
+a {
 	padding: 0;
 	margin: 0;
-	text-decoration: none; 
+	text-decoration: none;
 	color: rgb(29,178,158);
 	-webkit-transition: background-color .4s linear, color .4s linear;
 	-moz-transition: background-color .4s linear, color .4s linear;
@@ -185,7 +185,7 @@ a:focus {
 
 
 .content-container{
-	
+
 }
 
 
@@ -215,7 +215,7 @@ a:focus {
 	text-align: center;
 
 }
- 
+
 			/******* post layouts *******/
 
 
@@ -227,19 +227,19 @@ a:focus {
 	border: 2px solid #eee;
 }
 
-.post.cs2 { 
-	width: 60%; 
+.post.cs2 {
+	width: 60%;
 }
 
 /* Large desktop */
- 
+
 @media (min-width: 1200px) {
 	.container > #posts .post { width: 30%; }
 	.container > #posts .post.cs2 { width: 50%; }
 }
- 
+
 /* Portrait tablet to landscape and desktop */
- 
+
 @media (min-width: 768px) and (max-width: 979px) {
 	.container-fluid > #posts .post { width: 45%; }
 	.container-fluid > #posts .post.cs2 { width: 100%; }
@@ -248,7 +248,7 @@ a:focus {
 }
 
 /* Landscape phone to portrait tablet */
- 
+
 @media (max-width: 767px) {
 	.content-container{	margin: 5% 0px; }
 	.post, .post.cs2 { width: 100%; }
@@ -629,7 +629,7 @@ a:focus {
 	background-position: center center;
 	min-height: 450px;
 	width: 100%;
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -714,7 +714,7 @@ csmall2 {
 	background-position: center center;
 	min-height: 400px;
 	width: 100%;
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -726,27 +726,27 @@ csmall2 {
     background-size: cover;
 }
 
-.popular-posts { 
+.popular-posts {
 	margin: 0px;
 	padding-left: 0px;
 	}
-	
+
 .popular-posts li {
-	list-style: none; 
-	margin-bottom: 20px; 
+	list-style: none;
+	margin-bottom: 20px;
 	min-height: 70px;
 }
-.popular-posts li a, 
+.popular-posts li a,
 .popular-posts li a:hover {
-	color:#2f2f2f; 
+	color:#2f2f2f;
 	text-decoration: none;
 	}
-	
+
 .popular-posts li img {
-	float: left; 
+	float: left;
 	margin-right: 20px;
 	}
-	
+
 .popular-posts li em {
 	font-family: 'Lato', sans-serif;
 	font-size: 12px;
@@ -756,7 +756,7 @@ csmall2 {
 .popular-posts p {
 	line-height: normal;
 	margin-bottom: auto;
-}	
+}
 
 .share i {
 	padding-right: 15px;
