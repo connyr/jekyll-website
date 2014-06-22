@@ -1,22 +1,9 @@
-/*	################################################################
 
-	Author: Carlos Alvarez
-	URL: http://alvarez.is
-
-	Project Name: SOLID - Bootstrap 3 Theme
-	Version: 1.0
-	URL: http://alvarez.is
-
-################################################################# */
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Londrina+Sketch);
 @import url(http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister);
 @import url(http://fonts.googleapis.com/css?family=Imprima);
 @import url(http://fonts.googleapis.com/css?family=Text+Me+One);
-/*
-@import url("prettyPhoto.css") screen;
-@import url("hoverex-all.css") screen;
-*/
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 /*	################################################################
@@ -65,8 +52,8 @@ body {
 	}
 
 h1, h2, h3, h4, h5, h6 {
-	//font-family: "Love Ya Like A Sister", serif;
-	//font-weight: 700;
+	/*font-family: "Love Ya Like A Sister", serif;*/
+	/*font-weight: 700;*/
 }
 
 p {
