@@ -23,7 +23,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
 }
 
 mark{
-	background-color:#ff9;
+	background-color:#ff9;htm
 	color:#333;
 	font-style:italic;
 	font-weight:700;
@@ -32,6 +32,7 @@ mark{
 del{
 	text-decoration:line-through;
 }
+
 
 hr{
 	display:block;
@@ -112,6 +113,10 @@ a:focus {
 
 .centered {
 	text-align: center
+}
+
+.inline-block{
+    display: inline-block;
 }
 
 /******* Navigation *******/
@@ -244,6 +249,9 @@ a:focus {
 
 			/******* post style *******/
 
+.post-single{
+    background-color: white;
+}
 
 .post-banner{
 	background-color: rgb(134,194,218);
@@ -255,9 +263,28 @@ a:focus {
     float: none;
 }
 
+.post-banner .post-title h1{
+    color: white;
+    font-family: "Imprima",sans-serif!important;
+}
+
+
 .post-item-content{
-	padding: 0px 10px;
-	text-align: left;
+    padding: 1em 2em;
+    text-align: left;
+}
+
+.post-content{
+    margin: 3em;
+}
+
+.post-meta{
+    font-size: 0.7em;
+    text-align: right;
+}
+
+.post-meta p{
+    color: darkgray;
 }
 
 .post-list-item .post-title h3{

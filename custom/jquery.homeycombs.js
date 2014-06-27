@@ -18,6 +18,7 @@
             var num = 0;
             var $wrapper = null;
 
+
             /**
              * Build the dom
              */
@@ -31,8 +32,10 @@
                 $(element).find('.hex_l').append('<div class="hex_r"></div>');
                 $(element).find('.hex_r').append('<div class="hex_inner"></div>');
 
-                $(element).find('.hex_inner').append('<div class="inner_span"><div class="inner-text"></div></div>');
-                $(element).find('.hex_inner').append('<a class="inner_anchor"><img style="display:block" class="inner_img"></a>');
+                // $(element).find('.hex_inner').append('<div class="inner_span"><div class="inner_text"></div></div>');
+
+                $(element).find('.hex_inner').append('<a class="inner_anchor"><span class="inner_title"></span><img style="display:block" class="inner_img"></a>');
+
 
                 num = 0;
 
@@ -40,21 +43,17 @@
                     num = num + 1;
                     var image = this.getElementsByTagName('icon')[0].innerText;
                     var backgroundClass = this.getElementsByTagName('color')[0].innerText;
+                    var title = this.getElementsByTagName('projecttitle')[0].innerText;
 
                     var css = 'url("' + image + '") ';
 
                     $(this).find('.hex_inner').addClass(backgroundClass);
                     $(this).find('.inner_img').attr('src', image);
+                    $(this).find('.inner_title').text(title);
 
                     var reference = this.getElementsByTagName('reference');
                     if (reference.length > 0) {
                         $(this).find('.inner_anchor').attr('href', reference[0].innerText);
-                    }
-
-                    if ($(this).find('span').length > 0) {
-                        $(this).find('.inner_span .inner-text').html($(this).find('span').html());
-                    } else {
-                        $(this).find('.inner_span').remove();
                     }
                 });
 

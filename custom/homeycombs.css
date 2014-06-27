@@ -1,5 +1,5 @@
 
-icon, color, reference {
+icon, color, reference, projecttitle {
 	display: none;
 }
 
@@ -18,8 +18,16 @@ icon, color, reference {
 	font-family: sans-serif;
 	color: #000;
 }
-.honeycombs .inner-text{
-	padding-top: 30%;
+.honeycombs .inner_title{
+	position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background: rgba(1,1,1,0.3);
+    color: white;
+    font-size: 1.7em;
+    bottom: 0;
 }
 
 .honeycombs .inner_img{
@@ -56,7 +64,7 @@ icon, color, reference {
 	-ms-transform: rotate(60deg);
 	-o-transform: rotate(60deg);
 	-webkit-transform: rotate(60deg);
-	
+
 	transform: rotate(60deg);
 }
 
@@ -66,7 +74,7 @@ icon, color, reference {
 	-ms-transform: rotate(-120deg);
 	-o-transform: rotate(-120deg);
 	-webkit-transform: rotate(-120deg);
-	
+
 	transform: rotate(-120deg);
 }
 
@@ -77,13 +85,13 @@ icon, color, reference {
 	-ms-transform: rotate(60deg);
 	-o-transform: rotate(60deg);
 	-webkit-transform: rotate(60deg);
-	
+
 	transform: rotate(60deg);
-	
+
 	background-position: center;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	
+
 }

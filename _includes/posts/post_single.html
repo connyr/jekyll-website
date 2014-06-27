@@ -1,19 +1,20 @@
-<div>
+<div class="section-content post-single">
     <div class="post-banner">
-        <a href="{{post.url}}">
-        {% if post.banner %}<img class="img-responsive icon-image " src="/assets/posts/{{post.banner}}">
-        {% else %}<img class="img-responsive icon-image" src="/assets/posts/{{post.thumbnail}}">
-        {% endif %}
-        </a>
+        <div class="inline-block">
+            <a href="{{post.url}}">
+                {% if post.banner %}<img class="img-responsive icon-image " src="/assets/posts/{{post.banner}}">
+                {% else %}<img class="img-responsive icon-image" src="/assets/posts/{{post.thumbnail}}">
+                {% endif %}
+            </a>
+        </div>
+        <div class="post-title inline-block">
+            <a href="{{post.url}}">
+                <h1 class="white-font">{{post.title}}</h1>
+            </a>
+        </div>
     </div>
 
     <div class="post-item-content">
-
-<!--         <div class="post-title">
-            <a href="{{post.url}}">
-                <h3>{{post.title}}</h3>
-            </a>
-        </div> -->
 
         <div class="post-meta">
             <p>
@@ -29,18 +30,3 @@
     </div>
 
 </div>
-
-
-
-<p>
-    <csmall>Posted: {{page.date}}</csmall>|
-    <csmall2>By: Admin - 3 Comments</csmall2>
-</p>
-
-{{ content }}
-<div class="spacing"></div>
-
-<h6>SHARE:</h6>
-<p class="share">
-    {% include posts/post_sharing.html %}
-</p>
