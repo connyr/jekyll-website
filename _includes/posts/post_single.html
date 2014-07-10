@@ -18,8 +18,8 @@
 
         <div class="post-meta">
             <p>
-                <csmall>Posted: {{post.date}}.</csmall>|
-                <csmall2>By: {{site.blog_author}} - {{post.comments}} Comments</csmall2>
+                <csmall>Posted: {{ page.date | date_to_string }}.</csmall>
+                <!-- |<csmall2>By: {{site.blog_author}} - {{post.comments}} Comments</csmall2> -->
                 <div>sharing buttons</div>
             </p>
         </div>
