@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>{{ site.title }} 
+    <title>{{ site.title }}
             {% if page.title %}
             {% if site.titlecase %}
                - {{ page.title | titlecase }}
@@ -15,9 +15,9 @@
     <meta name="author" content="{{ site.author }}">
 
     {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
-    
+
     <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
-    
+
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
     <!-- http://t.co/dKP3o1e -->
@@ -33,8 +33,8 @@
 
     <link href="/bower_assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/bower_assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/custom/homeycombs.css" rel="stylesheet"> 
-    <link href="/custom/style.css" rel="stylesheet"> 
+    <link href="/custom/homeycombs.css" rel="stylesheet">
+    <link href="/custom/style.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -43,7 +43,9 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+    <link rel="icon"
+      type="image/png"
+      href="/images/layout/favicon_dark.png">
 </head>
 <body>
 
