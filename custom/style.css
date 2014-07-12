@@ -335,6 +335,10 @@ a:focus {
 
 /******* projects details style *******/
 
+.project-details{
+    border: 2px solid #eee;
+}
+
 .project-details h1{
     color: white;
     font-family: "Imprima",sans-serif!important;
@@ -344,8 +348,11 @@ a:focus {
     padding: 1em 2em;
     text-align: left;
     background: white;
-    border: 2px solid #eee;
 }
+
+.project-profile p{
+    font-family: "Imprima",sans-serif;
+    }
 
 
 /******* Recent projects *******/
