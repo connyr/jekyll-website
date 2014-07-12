@@ -117,6 +117,9 @@ a:focus {
     display: inline-block;
 }
 
+
+
+
 /******* Navigation *******/
 
 #nav-container{
@@ -156,6 +159,9 @@ a:focus {
 	border-bottom: 4px solid #eee;
 }
 
+
+
+
 /******* Headline section *******/
 
 #headline-container{
@@ -170,6 +176,9 @@ a:focus {
 	font-family: "Imprima";
 	color: #b3b3b3;
 }
+
+
+
 
 /******* Content *******/
 
@@ -188,7 +197,8 @@ a:focus {
 	font-family: "Love Ya Like A Sister", sans-serif;
 }
 
-	/* section with title */
+
+/* section with title */
 .section-container{
 	padding: 5% 5%;
 }
@@ -198,7 +208,9 @@ a:focus {
 	margin: 5em auto 0;
 }
 
-	/******* Recent posts *******/
+
+
+/******* Recent posts *******/
 
 #blog-wrap {
 	display: block;
@@ -206,7 +218,7 @@ a:focus {
 
 }
 
-			/******* post layouts *******/
+/******* post layouts *******/
 
 
 .post {
@@ -220,6 +232,9 @@ a:focus {
 .post.cs2 {
 	width: 60%;
 }
+
+
+
 
 /* Large desktop */
 
@@ -245,7 +260,9 @@ a:focus {
 }
 
 
-			/******* post style *******/
+
+
+/******* post details style *******/
 
 .post-single{
     background-color: white;
@@ -261,7 +278,7 @@ a:focus {
     float: none;
 }
 
-.post-banner .post-title h1{
+.post-banner h1{
     color: white;
     font-family: "Imprima",sans-serif!important;
 }
@@ -296,7 +313,7 @@ a:focus {
 }
 
 
-.post-list-item .post-title h3{
+.post-list-item h3{
 	color: rgb(134,194,218);
 	text-align: left;
 	font-size: 2.5em;
@@ -312,8 +329,26 @@ a:focus {
 
 }
 
+.sharing-button{
+}
 
-	/******* Recent projects *******/
+
+/******* projects details style *******/
+
+.project-details h1{
+    color: white;
+    font-family: "Imprima",sans-serif!important;
+}
+
+.project-detail-content{
+    padding: 1em 2em;
+    text-align: left;
+    background: white;
+    border: 2px solid #eee;
+}
+
+
+/******* Recent projects *******/
 
 .white-dashed-section{
 	background: white;

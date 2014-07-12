@@ -7,7 +7,7 @@
                 {% endif %}
             </a>
         </div>
-        <div class="post-title inline-block">
+        <div class="inline-block">
             <a href="{{post.url}}">
                 <h1 class="white-font imprima">{{post.title}}</h1>
             </a>
@@ -20,7 +20,7 @@
             <p>
                 <csmall>Posted: {{ page.date | date_to_string }}.</csmall>
                 <!-- |<csmall2>By: {{site.blog_author}} - {{post.comments}} Comments</csmall2> -->
-                <div>sharing buttons</div>
+                <div>{% include posts/post_sharing.html %}</div>
             </p>
         </div>
 
@@ -31,6 +31,6 @@
     </div>
 
     <div>
-        sharing
+        {% include posts/post_sharing.html %}
     </div>
 </div>

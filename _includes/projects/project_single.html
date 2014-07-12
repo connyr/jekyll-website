@@ -1,92 +1,39 @@
-	<!-- *****************************************************************************************************************
-	 TITLE & CONTENT
-	 ***************************************************************************************************************** -->
+<!-- *****************************************************************************************************************
+     TITLE & CONTENT
+     ***************************************************************************************************************** -->
 
-	 <div class="container mt">
-	 	<div class="row">
-	 		<div class="col-lg-10 col-lg-offset-1 centered">
-		 		<div class="{{page.bgcolor}}">
-		 			<a href=" {{ page.url }}"><img src="/assets/posts/{{page.icon}}" alt=""></a>
-		 			<div class="project-overlay center">
-						<a href=" {{ page.url }}">
-					{{ page.title }}
-       		</a>
-		</div>
-		 		</div>
+<div class="section-content project-details">
+    <div class="{{project.bgcolor}}">
+        <div class="inline-block">
+                <a href=" {{ project.url }}">
+                    <img src="/assets/posts/{{project.icon}}" alt="">
+                </a>
+        </div>
+        <div class="inline-block">
+           <a href=" {{ project.url }}">
+                <h1>{{ project.title }}</h1>
+            </a>
+        </div>
+    </div>
+    <div class="project-detail-content">
+        {{project.content}}
+    </div>
 
-	 		</div>
-	 	</div>
+</div>
 
-	 	<div class="row">
-		 	
-		 	<div class="col-lg-5 col-lg-offset-1">
-			 	<div class="spacing"></div>
-		 		<h4>{{page.title}}</h4>
-				{{ content }}
-		 	</div>
-		 	
-		 	<div class="col-lg-4 col-lg-offset-1">
-			 	<div class="spacing"></div>
-		 		<h4>Project Details</h4>
-		 		<div class="hline"></div>
-		 		<p><b>Categories:</b> {% for c in page.categories %} {{c | first}} {% endfor %} </p>
-		 		<p><b>Tagged:</b> {% for t in page.tags %} {{t | first}} {% endfor %} </p>
-		 		{% if page.website %}
-					<p><b>Website:</b> <a href="{{page.website}}">{{page.website}}</a></p>
-				{% endif %}
-		 	</div>
+<!-- *****************************************************************************************************************
+     PORTFOLIO SECTION
+     ***************************************************************************************************************** -->
+<div id="portfoliowrap">
+    <div class="portfolio-centered">
+        <h3>Related Works.</h3>
+        <div class="recentitems portfolio">
 
-		</div><! --/row -->
-		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1 centered">
-			 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
-				  <ol class="carousel-indicators">
-					
-				  	{% for i in page.banners %}
-				  	 <li data-target="#carousel-example-generic" data-slide-to="{{forloop.index}}"></li>
-					{% endfor %}
-				  </ol>
-				
-				  <!-- Wrapper for slides -->
-				  <div class="carousel-inner">
-				  	{% for i in page.banners %}
-				    <div class="item">
-				      <img src="assets/img/posts/{{i}}" alt="">
-				    </div>
-				    {% endfor %}
-				  </div>
-				</div><! --/Carousel -->
-		 	</div>
-		</div>
-	 </div><! --/container -->
-	 
-	<!-- *****************************************************************************************************************
-	 PORTFOLIO SECTION
-	 ***************************************************************************************************************** -->
-	 <div id="portfoliowrap">
-        <div class="portfolio-centered">
-        	<h3>Related Works.</h3>
-            <div class="recentitems portfolio">
+            {% for project in site.categories['project']%} {% assign cellindex = forloop.index%} {% include projects/project_preview.html %} {% endfor %} {% assign rest = cellindex | mod: 5%} {% assign rest = 5 | minus: rest %} {% for project in (1..rest) %} {% include projects/project_dummy.html %} {% endfor %}
 
-            	{% for project in site.categories['project']%}
-            	{% assign cellindex = forloop.index%}
-
-					{% include projects/project_preview.html %}
-
-				{% endfor %}
-
-	
-				{% assign rest = cellindex | mod: 5%}
-				{% assign rest = 5 | minus: rest %}
-				{% for project in (1..rest) %}
-
-					{% include projects/project_dummy.html %}
-				
-				{% endfor %}
-                                        
-            </div><!-- portfolio -->
-        </div><!-- portfolio container -->
-	 </div><!--/Portfoliowrap -->
-	 
-	 	
+        </div>
+        <!-- portfolio -->
+    </div>
+    <!-- portfolio container -->
+</div>
+<!--/Portfoliowrap -->
