@@ -17,20 +17,20 @@
     </div>
     <div class="project-detail-content">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-sm-12">
                 <!-- <div class="project-profile"><p>Description</p></div> -->
-            <p>
+            <section>
                 {{project.content}}
-                </p>
+            </section>
+
             </div>
-            <div class="col-md-3 project-profile">
-                <!-- <h4><b>Project Profile</b></h4> -->
+<!--             <div class="col-md-3 project-profile">
                 <p>Tagged: {% for t in project.tags %} {{t}} {% endfor %} </p>
                 {% if project.website %}
                     <p>Website: <a href="{{project.website}}">{{project.website}}</a></p>
                 {% endif %}
                 <p>Related Posts: {% for r in project.related %} {{r}} {% endfor %} </p>
-            </div>
+            </div> -->
         </div>
 
     </div>
