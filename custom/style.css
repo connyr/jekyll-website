@@ -245,10 +245,10 @@ a:focus {
 
 /* Portrait tablet to landscape and desktop */
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 1200px) {
 	.container-fluid > #posts .post { width: 45%; }
 	.container-fluid > #posts .post.cs2 { width: 100%; }
-	.container > #posts .post { width: 45%; }
+	.container > #posts .post { width: 30%; }
 	.container > #posts .post.cs2 { width: 100%; }
 }
 
