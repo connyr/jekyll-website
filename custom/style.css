@@ -1,14 +1,21 @@
-
+/*
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Londrina+Sketch);
 @import url(http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister);
-@import url(http://fonts.googleapis.com/css?family=Imprima);
-@import url(http://fonts.googleapis.com/css?family=Text+Me+One);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+@import url(http://fonts.googleapis.com/css?family=Imprima);*/
+/*@import url(http://fonts.googleapis.com/css?family=Text+Me+One);*/
+/*@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);*/
+/*@import url(http://fonts.googleapis.com/css?family=Lato:400,900);*/
 /*	################################################################
 	1. GENERAL STRUCTURES
 ################################################################# */
+ @font-face { font-family: Fira Sans; font-weight: 400; src: url('/custom/fonts/FiraSans-Regular.ttf'); }
+ @font-face { font-family: Fira Sans; font-weight: 700; src: url('/custom/fonts/FiraSans-Bold.ttf');}
+ @font-face { font-family: Londrina Sketch; font-weight: 400; src: url('/custom/fonts/LondrinaSketch-Regular.ttf');}
+ @font-face { font-family: Love Ya Like A Sister; font-weight: 400; src: url('/custom/fonts/LoveYaLikeASister.ttf');}
+ @font-face { font-family: Imprima; font-weight: 400; src: url('/custom/fonts/Imprima-Regular.ttf');}
+
+
 * {
 	border:0;
 	font-size:100%;
@@ -21,7 +28,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
 }
 
 mark{
-	background-color:#ff9;htm
+	background-color:#ff9;
 	color:#333;
 	font-style:italic;
 	font-weight:700;
@@ -335,8 +342,8 @@ a:focus {
 
 /******* projects details style *******/
 
-.project-details{
-    border: 2px solid #eee;
+.project-details img{
+    max-width: 320px;
 }
 
 .project-details h1{
@@ -348,7 +355,9 @@ a:focus {
     padding: 1em 2em;
     text-align: left;
     background: white;
-
+    border: 2px solid #ddd;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
 }
 
 .project-detail-content img{
