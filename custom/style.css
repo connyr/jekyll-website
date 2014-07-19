@@ -342,7 +342,7 @@ a:focus {
 
 /******* projects details style *******/
 
-.project-details img{
+.project-details img,video{
     max-width: 320px;
 }
 
