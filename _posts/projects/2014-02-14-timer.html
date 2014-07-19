@@ -12,37 +12,42 @@ tags:
 - games
 ---
 
-<p></p>
-
-<p>
-	<h5>What can it do?</h5>
-	Stopwatch, timer and alarm functionality
-</p>
-
-<p>
-	<h5>Technologies and Classes involved:</h5>
-	NSTimer, Concurrency, UILocalNotification, NSTimeInterval, UIDatePicker
-</p>
-
-
 <h4>Description</h4>
 <div class="hline"></div>
 
-<p>A countdown timer, similar in appearance and functionality to apples clock app.
-    <br>
-    Functionalities: Converting between decimal and fraction representation, GCD(euclid's greatest common divisor), simplifying, general operations between fractions (+,-,*,/)
+<p>Countdown timer and stopwatch similar to apple's included clock app.
+    <br><br>
+        <b>Timer</b> uses the UIDatePicker to set up the alarm time and counts down until it reaches zero. It also continues counting (for some time) when the app enters the background and uses a UILocalNotification to alert the user when the time has run out and plays a sound.
+        <br>
+    <b>Stopwatch</b> can recored lap times, and the usual play, pause, resume and reset functionalities. It also continues running for some time, after the app enters the background.
 </p>
+
+<h4>Source Code</h4>
+<div class="hline"></div>
+
+<p>
+
+<p>
 
 <h4>Screenshots</h4>
 <div class="hline"></div>
 
 <p>
     <div class="row">
-        <div class="col-xs-12 col-sm-6 text-center">The main screen with all operators and operands:
-            <img class="center-block" src="/assets/projects/fractions/images/fraction_0.png" alt="fraction image for the start screen with the fractions and the operations">
+        <div class="col-xs-12 col-sm-6 text-center">Timer configuration screen:
+            <img class="center-block" src="/assets/projects/timer/images/timer_0.png" alt="timer screen with picker to choose the amount of time we are setting it up for.">
         </div>
-        <div class="col-xs-12 col-sm-6 text-center">Changing the values:
-            <img class="center-block" src="/assets/projects/fractions/images/fraction_1.png" alt="fraction image for the start screen with the fractions and the operations">
+        <div class="col-xs-12 col-sm-6 text-center">Timer in action:
+            <img class="center-block" src="/assets/projects/timer/images/timer_1.png" alt="timer screen while the counter is active">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 text-center">Stopwatch start screen:
+            <img class="center-block" src="/assets/projects/timer/images/stopwatch_0.png" alt="stopwatch starting screen">
+        </div>
+        <div class="col-xs-12 col-sm-6 text-center">Stopwatch in action with recorded laps:
+            <img class="center-block" src="/assets/projects/timer/images/stopwatch_1.png" alt="Stopwatch is counting up and has two recorded laps in the tableview">
         </div>
     </div>
 </p>
@@ -52,9 +57,19 @@ tags:
 
 <p>
     <div>
-        <video width="50%" controls class="center-block">
-            <source src="/assets/projects/fractions/videos/fraction_video.mp4" type="video/mp4">
+        <video id="vid" onclick="playPause()" width="50%" controls class="center-block">
+            <source src="/assets/projects/timer/videos/timer_stopwatch_video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
         </video>
+        <script type="text/javascript">
+            var myVideo = document.getElementById("vid");
+
+            function playPause() {
+                if (myVideo.paused)
+                    myVideo.play();
+                else
+                    myVideo.pause();
+            }
+        </script>
     </div>
 </p>
