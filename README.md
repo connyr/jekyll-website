@@ -1,7 +1,5 @@
-connyr.github.io
-================
 
-This is the source of my personal website http://connyrehbein.com . The only interesting branch in this repo will be the source branch as GitHub expects the generated website to live in master.
+This is the source of my personal website http://codingcharms.com . The only interesting branch in this repo will be the source branch as GitHub expects the generated website to live in master.
 
 Steps to publish:
 
