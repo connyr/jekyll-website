@@ -54,22 +54,20 @@
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-
-<script src="/bower_assets/jquery/dist/jquery.min.js"></script>
-<script src="/bower_assets/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="/bower_assets/masonry/dist/masonry.pkgd.min.js"></script>
-<script src="/custom/custom.js"></script>
-<script src="/custom/jquery.homeycombs.js"></script>
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-    $('.menu-item').height($('#logo-col').height());
-});
-
-$(window).resize(function() {
-    $('.menu-item').height($('#logo-col').height());
-});
+if (typeof jQuery == 'undefined') {
+    // document.write can be form of eval!
+    document.write(unescape("%3Cscript src='/custom_libs/bower/jquery/dist/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
 </script>
+ea
+
+<script type="text/javascript" src="/custom_libs/bower/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/custom_libs/bower/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/custom_libs/bower/masonry/dist/masonry.pkgd.min.js" async></script>
+<script type="text/javascript" src="/custom_libs/js/jquery.homeycombs.js" async></script>
+<script type="text/javascript" src="/custom_libs/js/custom.js" async></script>
 
 <!-- Google Analytics Stuff -->
 <script>

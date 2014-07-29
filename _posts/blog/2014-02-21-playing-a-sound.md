@@ -5,7 +5,7 @@ title: "Playing a Sound with AVAudioPlayer"
 bgcolor: bgcolor-jade-green
 thumbnail: icons_alarm.svg
 
-categories: 
+categories:
 - blog
 tags:
 - ios
@@ -58,13 +58,13 @@ To play the sound:
                                                       ofType:@"mp3"];
             NSData *fileData = [NSData dataWithContentsOfFile:filePath];
             NSError *audioPlayerError = nil;
-            
+
             self.audioPlayer = [[AVAudioPlayer alloc]
                                 initWithData:fileData
                                 error:&audioPlayerError];
-            
+
             if (self.audioPlayer != nil){
-                if ([self.audioPlayer prepareToPlay] && [self.audioPlayer play]){ 
+                if ([self.audioPlayer prepareToPlay] && [self.audioPlayer play]){
                     NSLog(@"Successfully started playing.");
                 }else{
                     NSLog(@"Failed to play the audio file."); self.audioPlayer = nil;
@@ -95,7 +95,7 @@ To stop the audio, I used the UIAlertView delegate methods to get notified when 
 
 And the final result (be happy you cannot hear the annoying sound ..)
 
-{% img class /assets/2014-02-21-timer-alert.png 'screen shot' 'timer with alert' %}
+{% img class /images/assets/2014-02-21-timer-alert.png 'screen shot' 'timer with alert' %}
 
 Conny
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Simple Fractions Part 2" 
+title: "Simple Fractions Part 2"
 
 bgcolor: bgcolor-dark-blue
 thumbnail: icons_fraction.svg
 
 isFeaturedClass: cs2
 
-categories: 
+categories:
 - blog
 tags:
 - ios
@@ -40,8 +40,8 @@ First, let's create a method, that returns the decimal value of a fraction.
 	    double value = (double)self.numerator / self.denominator;
 	    return value;
 	}
-We can use this to display the fraction to the user in an alternate format. Another useful functionality would be to create the fraction out of a decimal number, like 0.345. To do this, we declare another init method that takes a decimal as parameter and creates a fraction object out of it. 
-	
+We can use this to display the fraction to the user in an alternate format. Another useful functionality would be to create the fraction out of a decimal number, like 0.345. To do this, we declare another init method that takes a decimal as parameter and creates a fraction object out of it.
+
 	- initWithDecimal:(double)decimalValue
 	{
 	    self = [super init];
@@ -76,7 +76,7 @@ To simplify a fraction we find the the greatest common divisor(gcd) and divide b
 	                                              withNumber:self.denominator];
 	    self.numerator /= gcd;
 	    self.denominator /= gcd;
-	} 
+	}
 
 We can choose from different methods to find the gcd [more info here](http://en.wikipedia.org/wiki/Greatest_common_divisor). I decided to use **euclids algorithm**.
 
@@ -98,10 +98,10 @@ So much for the logic part. Now we will create a user interface to actually try 
 First, I created a new UIViewController subclass, called CRFractionViewController.
 After that I added a new Storyboad to my project, and equipped it with a generic ViewController that is set to our custom class CRFractionViewController and added a number of controls that can be seen in the following picture:
 
-{% img class /assets/2014-02-12-fraction-2-0.png 'screen shot' 'image of the skeleton' %}
+{% img class /images/assets/2014-02-12-fraction-2-0.png 'screen shot' 'image of the skeleton' %}
 
-After I connected the labels outlets and the button actions to my view controller's header, this is what it looks like: 
-	
+After I connected the labels outlets and the button actions to my view controller's header, this is what it looks like:
+
 	#import <UIKit/UIKit.h>
 
 	@interface CRFractionViewController : UIViewController <UIAlertViewDelegate>
@@ -237,7 +237,7 @@ For the input I've choosen UIAlertView with a text input. Our ViewController als
 	                                                         delegate:self
 	                                                cancelButtonTitle:@"Cancel"
 	                                                otherButtonTitles:@"OK", nil];
-	    
+
 	    [inputDialog setAlertViewStyle:UIAlertViewStylePlainTextInput];
 
 	    UITextField* textField = [inputDialog textFieldAtIndex:0];
@@ -288,11 +288,11 @@ Now, if not already implemented, we add our viewcontroller to the window in the 
 And we're done!
 If you run the app now, you can edit the fractions.
 
-{% img class /assets/2014-02-12-fraction-2-1.png 'screen shot' 'image of the final app' %}
+{% img class /images/assets/2014-02-12-fraction-2-1.png 'screen shot' 'image of the final app' %}
 
 And also use add, multiply, etc., and see the result!
 
-{% img class /assets/2014-02-12-fraction-2-2.png 'screen shot' 'image of the final app' %}
+{% img class /images/assets/2014-02-12-fraction-2-2.png 'screen shot' 'image of the final app' %}
 
 
 
