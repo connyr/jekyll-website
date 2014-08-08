@@ -8,19 +8,19 @@
 {% for menu_item in site.data.members %}
 
 		<a href="{{menu_item.url}}">
-			
+
 			<div class="col-xs-3 col-md-2 menu-item
-				{% if menu_item.urlhints contains location %} 
+				{% if menu_item.urlhints contains location %}
 					active
 				{% endif %}">
-			
-				<div class="menu-item-wrapper">
-					<div class="float-vertical">
+
+
+				<div class="float-vertical">
 						<i class="fa {{menu_item.icon}}"></i><br>
 						{{menu_item.title}}
-					</div>
-
 				</div>
+
+
 			</div>
 		</a>
 
@@ -50,4 +50,4 @@
             <li {% if location == 'about' %} class="active" {% endif %}><a href="/about/">ABOUT</a></li>
   </ul>
 </h3>
-</div>   -->  
+</div>   -->

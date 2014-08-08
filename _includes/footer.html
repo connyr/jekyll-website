@@ -7,11 +7,11 @@
             <div class="col-lg-4">
                 <h4>About</h4>
                 <div class="hline-w"></div>
-                <p>Hi, <a href="/about/">I’m Conny.</a>I study Software Engineering and love to work on App Development in my free time. Have a look around and please don’t hesitate to <a href="mailto:contact@connyrehbein.com">contact me</a> with any comments, questions, or just to say hello!</p>
+                <p>Hi, <a href="/about/">I’m Conny. </a>I study Software Engineering and love to work on App Development in my free time. Have a look around and please don’t hesitate to <a href="mailto:contact@connyrehbein.com">contact me</a> with any comments, questions, or just to say hello!</p>
 
             </div>
-            <div class="col-lg-4">
-                <h4>Social Links</h4>
+            <div class="col-lg-4 text-center">
+                <h4>Get in Touch</h4>
                 <div class="hline-w"></div>
                 <p>
                     <a href="https://twitter.com/connyrehbein"><i class="fa fa-twitter"></i></a>
@@ -28,18 +28,22 @@
                 </p>
             </div>
             <div class="col-lg-4">
-                <h4>Legal</h4>
                 <div class="hline-w"></div>
                 <p>
                     <a href="mailto:contact@connyrehbein.com">Contact</a>
                     <br/>
-                    <a href="/impressum/">Impressum</a>
+                    <a href="/impressum/">Legal Disclosure</a>
+                    <br/>
+                    <a href="/privacy_statement/">Privacy Statement</a>
                     <br/>
                     <a href="/sitemap.xml">Sitemap</a>
                     <br/>
                 </p>
             </div>
 
+        </div>
+        <div class="text-center" style="color:white;">
+            Copyright &copy; 2014 Cornelia Rehbein - Made with Bootstrap, Jekyll and .
         </div>
         <! --/row -->
     </div>
@@ -50,22 +54,20 @@
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-
-<script src="/bower_assets/jquery/dist/jquery.min.js"></script>
-<script src="/bower_assets/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="/bower_assets/masonry/dist/masonry.pkgd.min.js"></script>
-<script src="/custom/custom.js"></script>
-<script src="/custom/jquery.homeycombs.js"></script>
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-    $('.menu-item').height($('#logo-col').height());
-});
-
-$(window).resize(function() {
-    $('.menu-item').height($('#logo-col').height());
-});
+if (typeof jQuery == 'undefined') {
+    // document.write can be form of eval!
+    document.write(unescape("%3Cscript src='/custom_libs/bower/jquery/dist/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
 </script>
+ea
+
+<script type="text/javascript" src="/custom_libs/bower/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/custom_libs/bower/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/custom_libs/bower/masonry/dist/masonry.pkgd.min.js" async></script>
+<script type="text/javascript" src="/custom_libs/js/jquery.homeycombs.js" async></script>
+<script type="text/javascript" src="/custom_libs/js/custom.js" async></script>
 
 <!-- Google Analytics Stuff -->
 <script>
