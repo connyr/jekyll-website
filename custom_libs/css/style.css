@@ -141,7 +141,7 @@ a:focus {
 .menu-item{
 	font-size: 2em;
 	font-family: "Love Ya Like A Sister", serif;
-	height: 100px;
+	height: 140px;
 	color: rgb(134,194,218);
     margin: auto;
 }
@@ -152,7 +152,7 @@ a:focus {
 
 .logo-font{
 	font-family: "Londrina Sketch", serif;
-	font-size: 4em;
+	font-size: 40px;
 }
 
 .hline {
@@ -250,6 +250,7 @@ a:focus {
 @media (max-width: 767px) {
 	.content-container{	margin: 5% 0px; }
 	.post, .post.cs2 { width: 100%; }
+    .menu-item {height:100px;}
 }
 
 
