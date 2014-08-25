@@ -1,0 +1,17 @@
+
+
+<h2 class="text-center"><b>"Sucking at something is the first step to being sorta good at something"</b> <br> - Jake the Dog, Adventure Time</h2>
+<div class="section-content">
+    <div class="honeycombs">
+
+		    {% assign upperlimit = 6 %}
+		    {% assign pIndex = 1 %}
+
+        	{% for project in site.categories['project'] |limit: upperLimit %}
+        	{% assign pIndex = pIndex| plus:1 %}
+
+				{% include projects/project_preview.html %}
+
+			{% endfor %}
+	</div>
+</div>
