@@ -1,0 +1,13 @@
+{% include head.html %}
+{% include navigation/navigation.html %}
+
+<div class="alert alert-warning" role="alert"> This Blog is currently under development. Some sites might not work or display correctly yet. Also beware of errors and grammar mistakes</div>
+
+    {% assign project = page %}
+
+    <div class="container">
+       {% include projects/project_single.html %}
+    </div>
+
+
+{% include footer.html %}

@@ -1,0 +1,57 @@
+    <!-- Fixed navbar -->
+{% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
+
+<div class="container-fluid" id="nav-container">
+
+    <div class="col-md-6 col-md-offset-3 hidden-md hidden-lg" id="logo-col">
+        {% include navigation/logo.html%}
+    </div>
+
+	<div class="row text-center">
+
+{% for menu_item in site.data.members %}
+
+		<a href="{{menu_item.url}}">
+
+			<div class="col-xs-3 col-md-2 menu-item
+				{% if menu_item.urlhints contains location %}
+					active
+				{% endif %}">
+
+
+				<div class="float-vertical">
+						<i class="fa {{menu_item.icon}}"></i><br>
+						{{menu_item.title}}
+				</div>
+
+
+			</div>
+		</a>
+
+		{% if forloop.index0 == 1 %}
+
+				<div class="col-md-4 visible-md visible-lg" id="logo-col">
+					{% include navigation/logo.html%}
+				</div>
+
+		{% endif %}
+
+{% endfor %}
+
+	</div>
+</div>
+
+<div class="hline"></div>
+
+{% include navigation/headline.html %}
+
+<div class="hline"></div>
+<!-- <div id="nav-wrap" role="navigation">
+  <h3><ul class="nav-list">
+            <li {% if location == 'index.html' %} class="active" {% endif %}></li>
+            <li {% if location == 'blog' %} class="active" {% endif %}></li>
+            <li {% if location == 'projects' %} class="active" {% endif %}><a href="/projects/">LAB</a></li>
+            <li {% if location == 'about' %} class="active" {% endif %}><a href="/about/">ABOUT</a></li>
+  </ul>
+</h3>
+</div>   -->

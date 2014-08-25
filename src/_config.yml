@@ -1,0 +1,35 @@
+
+description: "Conny Rehbein's personal website with posts and experiments"
+baseurl: ""
+url: "http://connyrehbein.com"
+
+destination: "./../site"
+
+# Build settings
+markdown: kramdown
+
+# Site settings
+title: connyrehbein
+email: contact@connyrehbein.com
+description: "Tech blog, mainly about front-end and mobile development and the challenges in learning these."
+url: "http://connyrehbein.com"
+short_url: "connyrehbein.com"
+blog_author: Conny
+
+# Build settings
+markdown: kramdown
+author: Cornelia Rehbein
+
+include: ['_pages', 'custom_libs']
+
+# permalink: pretty
+relative_permalinks: false
+permalink:     '/:categories/:year/:title/'
+
+# paginate:      7
+# paginate_path: "_pages/blog/page:num"
+
+excerpt_separator: "<!-- more -->"
+excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+
+highlighter: pygments
