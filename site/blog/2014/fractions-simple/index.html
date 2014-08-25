@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>connyrehbein
+            
+            
+               - Simple Fractions Part 1
+            </title>
+    <meta name="author" content="Cornelia Rehbein">
+
+    
+
+    <meta name="description" content="Tech blog, mainly about front-end and mobile development and the challenges in learning these.">
+
+    
+
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <link rel="canonical" href="/blog/2014/fractions-simple/" />
+    <link href="" rel="alternate" title="connyrehbein" type="application/atom+xml">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link href="/custom_libs/css/homeycombs.css" rel="stylesheet">
+    <link href="/custom_libs/css/style.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="icon"
+      type="image/png"
+      href="/images/favicon_no_text.png">
+</head>
+<body>
+
+
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <!-- Fixed navbar -->
+
+
+<div class="container-fluid" id="nav-container">
+
+    <div class="col-md-6 col-md-offset-3 hidden-md hidden-lg" id="logo-col">
+        <header>
+    <a href="/">
+    <div class="text-center">
+        <h1 class="logo-font">>_ ConnyRehbein;</h1><br>
+     		tutorials, opinions and thoughts about coding
+
+    </div>
+    </a>
+</header>
+    </div>
+
+	<div class="row text-center">
+
+
+
+		<a href="/">
+
+			<div class="col-xs-3 col-md-2 menu-item
+				">
+
+
+				<div class="float-vertical">
+						<i class="fa fa-home"></i><br>
+						HOME
+				</div>
+
+
+			</div>
+		</a>
+
+		
+
+
+
+		<a href="/blog/">
+
+			<div class="col-xs-3 col-md-2 menu-item
+				
+					active
+				">
+
+
+				<div class="float-vertical">
+						<i class="fa fa-pencil"></i><br>
+						BLOG
+				</div>
+
+
+			</div>
+		</a>
+
+		
+
+				<div class="col-md-4 visible-md visible-lg" id="logo-col">
+					<header>
+    <a href="/">
+    <div class="text-center">
+        <h1 class="logo-font">>_ ConnyRehbein;</h1><br>
+     		tutorials, opinions and thoughts about coding
+
+    </div>
+    </a>
+</header>
+				</div>
+
+		
+
+
+
+		<a href="/projects/">
+
+			<div class="col-xs-3 col-md-2 menu-item
+				">
+
+
+				<div class="float-vertical">
+						<i class="fa fa-flask"></i><br>
+						LAB
+				</div>
+
+
+			</div>
+		</a>
+
+		
+
+
+
+		<a href="/about/">
+
+			<div class="col-xs-3 col-md-2 menu-item
+				">
+
+
+				<div class="float-vertical">
+						<i class="fa fa-user"></i><br>
+						ABOUT
+				</div>
+
+
+			</div>
+		</a>
+
+		
+
+
+
+	</div>
+</div>
+
+<div class="hline"></div>
+
+<div id="headline-container">
+			<div class="container">
+				<div class="row">
+						<div class="header-content">
+						<h2><span>
+							
+								Post details
+							</span></h2>
+						</div>
+				</div>
+			</div>
+</div>
+
+<div class="hline"></div>
+<!-- <div id="nav-wrap" role="navigation">
+  <h3><ul class="nav-list">
+            <li ></li>
+            <li  class="active" ></li>
+            <li ><a href="/projects/">LAB</a></li>
+            <li ><a href="/about/">ABOUT</a></li>
+  </ul>
+</h3>
+</div>   -->
+
+
+<div class="alert alert-warning" role="alert">August, 2014: This Blog is still under development. I am currently reimplementing it for the Wintersmith static site engine to replace jekyll with it. More infos on the process will follow. </div>
+
+	
+
+    <div class="container">
+	   <div class="section-content post-single">
+    <div class="post-banner">
+        <div class="inline-block">
+            <a href="/blog/2014/fractions-simple/">
+                <img class="img-responsive icon-image" src="/images/assets/posts/icons_fraction.svg">
+                
+            </a>
+        </div>
+        <div class="inline-block">
+            <a href="/blog/2014/fractions-simple/">
+                <h1 class="white-font imprima">Simple Fractions Part 1</h1>
+            </a>
+        </div>
+    </div>
+
+    <div class="post-content">
+
+        <div class="post-meta">
+            <p>
+                <csmall>Posted: 12 Feb 2014.</csmall>
+                <!-- |<csmall2>By: Conny -  Comments</csmall2> -->
+                <div><div> 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://connyrehbein.com/blog/2014/fractions-simple/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div> </div>
+<div> <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@connyrehbein">
+
+
+  <meta name="twitter:title" content="Simple Fractions Part 1">
+
+
+
+  <meta name="twitter:url" content="http://connyrehbein.com/blog/2014/fractions-simple/">
+
+
+<meta name="twitter:description" content="  Let&#39;s create a program that handles calculations with fractions. We want allow additon, subtraction, multiplication, and division of the fractions.
+
+
+  Later, we might display the fractions a...">
+
+
+<div class="share-button"><a href="https://twitter.com/share" data-via="connyrehbein" data-count="none"><i class="fa fa-twitter"></i></a></div>
+
+
+  <meta name="twitter:image:src" content="http://connyrehbein.com/path/to/image/logo.png">
+
+
+<script>
+! function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');
+</script>
+ </div>
+<div> <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script> </div></div>
+            </p>
+        </div>
+
+        <div class="post-content-text">
+            <p>Let’s create a program that handles calculations with fractions. We want allow additon, subtraction, multiplication, and division of the fractions.
+<!-- more --></p>
+
+<p>Later, we might display the fractions as percents and decimals. Or as mixed numbers. Or just do something fancy with it.</p>
+
+<p>The source code is available on <a href="https://github.com/connyr/ios-projects/tree/master/Numbers/Fractions">github</a>.</p>
+
+<h3 id="analyse-the-tasks">Analyse the Tasks</h3>
+
+<p><strong>Fractions</strong> are usually displayed with a <strong>numerator</strong> on top, a dividing slash, and a non-zero <strong>denominator</strong> at the bottom. Check <a href="http://en.wikipedia.org/wiki/Fraction_(mathematics)">Wikipedia</a> for more info.</p>
+
+<p>Model/Logic</p>
+
+<ul>
+  <li>Datastructure/Class for <strong>Fraction</strong></li>
+  <li>Addition: Adds two fractions numerators. If the denominators don’t match we have to find the a common denominator, before we can sum up the numerators.</li>
+  <li>Subtraction: Same as Addition, but subtracting the numerators instead.</li>
+  <li>Multiplication: Multiply the numerators and multiply the denumerators.</li>
+  <li>Division: Divide first fraction by multiplying it with the reciprocal of the second fraction</li>
+</ul>
+
+<p>User should be able to</p>
+
+<ul>
+  <li>Change the fraction’s numerators and denumerators</li>
+  <li>Choose the operation (+,-,*,/)</li>
+  <li>View the result</li>
+</ul>
+
+<p>So much for the basics.</p>
+
+<p>First, create a new class, called for example CRFraction, a subclass of NSObject, as our data model. The header file should look like this:</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
+
+	<span class="k">@interface</span> <span class="nc">CRFraction</span> : <span class="bp">NSObject</span>
+
+	<span class="k">@property</span><span class="p">(</span><span class="k">nonatomic</span><span class="p">)</span> <span class="bp">NSInteger</span> <span class="n">numerator</span><span class="p">;</span> <span class="c1">// number above the slash</span>
+	<span class="k">@property</span><span class="p">(</span><span class="k">nonatomic</span><span class="p">)</span> <span class="bp">NSInteger</span> <span class="n">denominator</span><span class="p">;</span> <span class="c1">//number below the slash</span>
+
+	<span class="o">-</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">addFraction</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">anotherFraction</span><span class="p">;</span>
+	<span class="o">-</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">subtractFraction</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">anotherFraction</span><span class="p">;</span>
+	<span class="o">-</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">multiplyWithFraction</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">anotherFraction</span><span class="p">;</span>
+	<span class="o">-</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">divideWithFraction</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">anotherFraction</span><span class="p">;</span>
+
+	<span class="o">+</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">fractionByAdding</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">op1</span> <span class="nl">to</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">op2</span><span class="p">;</span>
+	<span class="o">+</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">fractionBySubtracting</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">op1</span> <span class="nl">from</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">op2</span><span class="p">;</span>
+	<span class="o">+</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">fractionByMultiplying</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">op1</span> <span class="nl">with</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">op2</span><span class="p">;</span>
+	<span class="o">+</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">fractionByDividing</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">op1</span> <span class="nl">by</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">op2</span><span class="p">;</span></code></pre></div>
+
+<p>(The leading CR in the classname is just my personal class prefix). I defined two properties, <strong>numerator ** and **denominator</strong> which will hold the values of the fraction. I also defined some instance and class methods that we will fill soon.</p>
+
+<p>With this, we can later add two fractions, ** a ** and ** b ** , either by calling</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">[</span><span class="n">a</span> <span class="nl">addFraction</span><span class="p">:</span><span class="n">b</span><span class="p">];</span></code></pre></div>
+
+<p>or by using the class method.</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">[</span><span class="n">CRFraction</span> <span class="nl">fractionByAdding</span><span class="p">:</span> <span class="n">a</span> <span class="nl">to</span><span class="p">:</span> <span class="n">b</span><span class="p">];</span></code></pre></div>
+
+<p>In the first case, the actual values of ** a ** are changed and returned. In the second example, ** a ** and ** b ** are not changed and we receive a new CRFraction object as a result.</p>
+
+<p>Now, let’s fill in the actual logic.</p>
+
+<h3 id="the-logic">The Logic</h3>
+
+<h4 id="addition">Addition</h4>
+<p>If both fractions share the same denominators, we only need to add the numerators to each other. Otherwise we have to find a common denominator for both fractions.
+To find the common denominator we will for now use the simple, but not optimized <a href="http://en.wikipedia.org/wiki/Fraction_(mathematics)#Adding_unlike_quantities">cross-product method</a>.</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">+</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nf">fractionByAdding:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">op1</span>
+	                             <span class="nf">to:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">op2</span>
+	<span class="p">{</span>
+	    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CRFraction</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="n">op1</span><span class="p">.</span><span class="n">denominator</span> <span class="o">==</span> <span class="n">op2</span><span class="p">.</span><span class="n">denominator</span><span class="p">)</span> <span class="p">{</span>
+	        <span class="n">result</span><span class="p">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="n">op1</span><span class="p">.</span><span class="n">numerator</span> <span class="o">+</span> <span class="n">op2</span><span class="p">.</span><span class="n">numerator</span><span class="p">;</span>
+	        <span class="n">result</span><span class="p">.</span><span class="n">denominator</span> <span class="o">=</span> <span class="n">op1</span><span class="p">.</span><span class="n">denominator</span><span class="p">;</span>
+	    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	        <span class="c1">// Find a common denominator with the crossproduct</span>
+	        <span class="n">result</span><span class="p">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="p">(</span><span class="n">op1</span><span class="p">.</span><span class="n">numerator</span> <span class="o">*</span> <span class="n">op2</span><span class="p">.</span><span class="n">denominator</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">op1</span><span class="p">.</span><span class="n">denominator</span> <span class="o">*</span> <span class="n">op2</span><span class="p">.</span><span class="n">numerator</span><span class="p">);</span>
+	        <span class="n">result</span><span class="p">.</span><span class="n">denominator</span> <span class="o">=</span> <span class="n">op1</span><span class="p">.</span><span class="n">denominator</span> <span class="o">*</span> <span class="n">op2</span><span class="p">.</span><span class="n">denominator</span><span class="p">;</span>
+	    <span class="p">}</span>
+	    <span class="p">[</span><span class="n">result</span> <span class="n">normalize</span><span class="p">];</span>
+	    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></div>
+
+<p>For the instance method, we can make use of the class method by using the instance as a parameter.</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nf">addFraction:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">anotherFraction</span>
+	<span class="p">{</span>
+	    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">CRFraction</span> <span class="nl">fractionByAdding</span><span class="p">:</span><span class="n">anotherFraction</span>
+	                                                   <span class="nl">to</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
+	    <span class="p">[</span><span class="nb">self</span> <span class="nl">copyValuesFromFraction</span><span class="p">:</span><span class="n">result</span><span class="p">];</span>
+	    <span class="k">return</span> <span class="nb">self</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></div>
+
+<p>First, we call the class method with the parameter and our instance. The we copy the values with in the result to our current instance in the ** copyValuesFromFraction: ** method.</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">copyValuesFromFraction:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">result</span>
+	<span class="p">{</span>
+	    <span class="nb">self</span><span class="p">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">numerator</span><span class="p">;</span>
+	    <span class="nb">self</span><span class="p">.</span><span class="n">denominator</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">denominator</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></div>
+
+<h4 id="subtraction">Subtraction</h4>
+
+<p>Subtraction works similar to Addition. But what if the operation has a negative result? We should normalize negative values in our fractions after the operations before the returns.</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">+</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nf">fractionBySubtracting:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">op1</span> <span class="nf">from:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">op2</span>
+	<span class="p">{</span>
+	    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CRFraction</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="n">op1</span><span class="p">.</span><span class="n">denominator</span> <span class="o">==</span> <span class="n">op2</span><span class="p">.</span><span class="n">denominator</span><span class="p">)</span> <span class="p">{</span>
+	        <span class="n">result</span><span class="p">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="n">op2</span><span class="p">.</span><span class="n">numerator</span> <span class="o">-</span> <span class="n">op1</span><span class="p">.</span><span class="n">numerator</span><span class="p">;</span>
+	        <span class="n">result</span><span class="p">.</span><span class="n">denominator</span> <span class="o">=</span> <span class="n">op2</span><span class="p">.</span><span class="n">denominator</span><span class="p">;</span>
+	    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	        <span class="c1">// Find a common denominator with the crossproduct</span>
+	        <span class="n">result</span><span class="p">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="p">(</span><span class="n">op1</span><span class="p">.</span><span class="n">denominator</span> <span class="o">*</span> <span class="n">op2</span><span class="p">.</span><span class="n">numerator</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">op1</span><span class="p">.</span><span class="n">numerator</span> <span class="o">*</span> <span class="n">op2</span><span class="p">.</span><span class="n">denominator</span><span class="p">);</span>
+	        <span class="n">result</span><span class="p">.</span><span class="n">denominator</span> <span class="o">=</span> <span class="n">op1</span><span class="p">.</span><span class="n">denominator</span> <span class="o">*</span> <span class="n">op2</span><span class="p">.</span><span class="n">denominator</span><span class="p">;</span>
+	    <span class="p">}</span>
+	    <span class="p">[</span><span class="n">result</span> <span class="n">normalize</span><span class="p">];</span>
+	    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="o">-</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">subtractFraction</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">anotherFraction</span>
+	<span class="p">{</span>
+	    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">CRFraction</span> <span class="nl">fractionBySubtracting</span><span class="p">:</span><span class="n">anotherFraction</span>
+	                                                      <span class="nl">from</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
+	    <span class="p">[</span><span class="nb">self</span> <span class="nl">copyValuesFromFraction</span><span class="p">:</span><span class="n">result</span><span class="p">];</span>
+	    <span class="k">return</span> <span class="nb">self</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></div>
+
+<p>The subtraction now looks nearly identical to the previous method, except for minus the operator.
+ &gt; Note: I see parts, where we could optimize this method already, e.g., sending the operator as a parameter so that both addition and subtraction could be handled by the same method… But, I want to avoid premature optimization for now.</p>
+
+<p>I also defined a new method, normalize, that will take care of negative fractions. If both parts are negative, then we can normalize it to a positive fraction. Also, If only the denominator is negative, if want to switch signs, so that the numerator is negative instead.</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">normalize</span>
+	<span class="p">{</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">denominator</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+	        <span class="nb">self</span><span class="p">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="o">-</span><span class="nb">self</span><span class="p">.</span><span class="n">numerator</span><span class="p">;</span>
+	        <span class="nb">self</span><span class="p">.</span><span class="n">denominator</span> <span class="o">=</span> <span class="o">-</span><span class="nb">self</span><span class="p">.</span><span class="n">denominator</span><span class="p">;</span>
+	    <span class="p">}</span>
+	<span class="p">}</span></code></pre></div>
+
+<p>It’s actually enough, if we only check for a negative denominator.</p>
+
+<h4 id="multiplication">Multiplication</h4>
+
+<p>Multiplication multiplies each of the numerators and denominators.</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">+</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nf">fractionByMultiplying:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">op1</span> <span class="nf">with:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">op2</span>
+	<span class="p">{</span>
+	    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CRFraction</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+	    <span class="n">result</span><span class="p">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="n">op1</span><span class="p">.</span><span class="n">numerator</span> <span class="o">*</span> <span class="n">op2</span><span class="p">.</span><span class="n">numerator</span><span class="p">;</span>
+	    <span class="n">result</span><span class="p">.</span><span class="n">denominator</span> <span class="o">=</span> <span class="n">op1</span><span class="p">.</span><span class="n">denominator</span> <span class="o">*</span> <span class="n">op2</span><span class="p">.</span><span class="n">denominator</span><span class="p">;</span>
+	    <span class="p">[</span><span class="n">result</span> <span class="n">normalize</span><span class="p">];</span>
+	    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="o">-</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">multiplyWithFraction</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">anotherFraction</span>
+	<span class="p">{</span>
+	    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">CRFraction</span> <span class="nl">fractionByMultiplying</span><span class="p">:</span><span class="nb">self</span>
+	                                                      <span class="nl">with</span><span class="p">:</span><span class="n">anotherFraction</span><span class="p">];</span>
+	    <span class="p">[</span><span class="nb">self</span> <span class="nl">copyValuesFromFraction</span><span class="p">:</span><span class="n">result</span><span class="p">];</span>
+	    <span class="k">return</span> <span class="nb">self</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></div>
+
+<h4 id="division">Division</h4>
+
+<p>Division between fractions is solved using one fractions reciprocal(reverse) and multiply the fractions.</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">+</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nf">fractionByDividing:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">op1</span> <span class="nf">by:</span><span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nv">op2</span>
+	<span class="p">{</span>
+	    <span class="c1">// reciprocal or reverse fraction</span>
+	    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CRFraction</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNumerator</span><span class="p">:</span><span class="n">op2</span><span class="p">.</span><span class="n">denominator</span>
+	                                             <span class="nl">withDenominator</span><span class="p">:</span><span class="n">op2</span><span class="p">.</span><span class="n">numerator</span><span class="p">];</span>
+	    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">CRFraction</span> <span class="nl">fractionByMultiplying</span><span class="p">:</span><span class="n">op1</span>
+	                                                      <span class="nl">with</span><span class="p">:</span><span class="n">temp</span><span class="p">];</span>
+	    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="o">-</span> <span class="p">(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="nl">divideWithFraction</span><span class="p">:(</span><span class="n">CRFraction</span><span class="o">*</span><span class="p">)</span><span class="n">anotherFraction</span>
+	<span class="p">{</span>
+	    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">CRFraction</span> <span class="nl">fractionByDividing</span><span class="p">:</span><span class="nb">self</span>
+	                                                     <span class="nl">by</span><span class="p">:</span><span class="n">anotherFraction</span><span class="p">];</span>
+	    <span class="p">[</span><span class="nb">self</span> <span class="nl">copyValuesFromFraction</span><span class="p">:</span><span class="n">result</span><span class="p">];</span>
+	    <span class="k">return</span> <span class="nb">self</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></div>
+<p>}</p>
+
+<h4 id="showtime">Showtime</h4>
+
+<p>To test this out, we can now create some fractions and change their values. First of, let’s add a convenient initializer function for our fractions</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">-</span> <span class="nf">initWithNumerator:</span><span class="p">(</span><span class="bp">NSInteger</span><span class="p">)</span><span class="nv">num</span> <span class="nf">withDenominator:</span><span class="p">(</span><span class="bp">NSInteger</span><span class="p">)</span><span class="nv">denom</span>
+	<span class="p">{</span>
+	    <span class="nb">self</span> <span class="o">=</span> <span class="p">[</span><span class="nb">super</span> <span class="n">init</span><span class="p">];</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">)</span> <span class="p">{</span>
+	        <span class="nb">self</span><span class="p">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span>
+	        <span class="nb">self</span><span class="p">.</span><span class="n">denominator</span> <span class="o">=</span> <span class="n">denom</span><span class="p">;</span>
+	    <span class="p">}</span>
+	    <span class="k">return</span> <span class="nb">self</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></div>
+<p>}</p>
+
+<p>Now, we can test it out in the application:didFinishLaunchingWithOptions:</p>
+
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">window</span> <span class="n">makeKeyAndVisible</span><span class="p">];</span>
+
+    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">fracA</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CRFraction</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNumerator</span><span class="p">:</span><span class="mi">1</span>
+                                              <span class="nl">withDenominator</span><span class="p">:</span><span class="mi">4</span><span class="p">];</span> <span class="c1">// 1/4</span>
+
+    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">fracB</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CRFraction</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNumerator</span><span class="p">:</span><span class="mi">1</span>
+                                              <span class="nl">withDenominator</span><span class="p">:</span><span class="mi">3</span><span class="p">];</span> <span class="c1">// 1/3</span>
+    <span class="n">CRFraction</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">CRFraction</span> <span class="nl">fractionByAdding</span><span class="p">:</span> <span class="n">frac1</span> <span class="nl">to</span><span class="p">:</span> <span class="n">frac2</span><span class="p">];</span>
+
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot; 1/4 - 1/3 = %i/%i&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">.</span><span class="n">numerator</span><span class="p">,</span> <span class="n">result</span><span class="p">.</span><span class="n">denominator</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span></code></pre></div>
+<p>}</p>
+
+<blockquote>
+  <blockquote>
+    <p>1/4 + 1/3 = 7/12</p>
+  </blockquote>
+</blockquote>
+
+<p>Go ahead and try out all of the functions, if you like.</p>
+
+<p>In the next part I will extend the logic with decimals, mixed fractions, and gcd - the greatest common divider.</p>
+
+
+        </div>
+
+    </div>
+
+    <div>
+        <div> 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://connyrehbein.com/blog/2014/fractions-simple/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div> </div>
+<div> <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@connyrehbein">
+
+
+  <meta name="twitter:title" content="Simple Fractions Part 1">
+
+
+
+  <meta name="twitter:url" content="http://connyrehbein.com/blog/2014/fractions-simple/">
+
+
+<meta name="twitter:description" content="  Let&#39;s create a program that handles calculations with fractions. We want allow additon, subtraction, multiplication, and division of the fractions.
+
+
+  Later, we might display the fractions a...">
+
+
+<div class="share-button"><a href="https://twitter.com/share" data-via="connyrehbein" data-count="none"><i class="fa fa-twitter"></i></a></div>
+
+
+  <meta name="twitter:image:src" content="http://connyrehbein.com/path/to/image/logo.png">
+
+
+<script>
+! function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');
+</script>
+ </div>
+<div> <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script> </div>
+    </div>
+</div>
+
+    </div>
+
+<!-- *****************************************************************************************************************
+     FOOTER
+     ***************************************************************************************************************** -->
+<div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About</h4>
+                <div class="hline-w"></div>
+                <p>Hi, <a href="/about/">I’m Conny. </a>I study Software Engineering and love to work on App Development in my free time. Have a look around and please don’t hesitate to <a href="mailto:contact@connyrehbein.com">contact me</a> with any comments, questions, or just to say hello!</p>
+
+            </div>
+            <div class="col-lg-4 text-center">
+                <h4>Get in Touch</h4>
+                <div class="hline-w"></div>
+                <p>
+                    <a href="https://twitter.com/connyrehbein"><i class="fa fa-twitter"></i></a>
+
+                    <a href="http://github.com/connyr"><i class="fa fa-github"></i></a>
+
+                    <a href="http://de.linkedin.com/pub/cornelia-rehbein/39/262/aa5/en"><i class="fa fa-linkedin"></i></a>
+
+                    <!-- <a href="mailto:contact@connyrehbein.com"><i class="fa fa-envelope-o"></i></a> -->
+
+                    <a href="https://www.facebook.com/conny.rehbein"><i class="fa fa-facebook"></i></a>
+
+                    <a href="https://plus.google.com/u/2/+CorneliaRehbein"><i class="fa fa-google-plus"></i></a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <div class="hline-w"></div>
+                <p>
+                    <a href="mailto:contact@connyrehbein.com">Contact</a>
+                    <br/>
+                    <a href="/impressum/">Legal Disclosure</a>
+                    <br/>
+                    <a href="/privacy_statement/">Privacy Statement</a>
+                    <br/>
+                    <a href="/sitemap.xml">Sitemap</a>
+                    <br/>
+                </p>
+            </div>
+
+        </div>
+        <div class="text-center" style="color:white;">
+            Copyright &copy; 2014 Cornelia Rehbein - Made with Bootstrap, Jekyll and .
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+</div>
+<! --/footerwrap -->
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script scr="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script src="/custom_libs/bower/masonry/dist/masonry.pkgd.min.js" async></script>
+<script src="/custom_libs/js/jquery.homeycombs.js" async></script>
+
+<script src="/custom_libs/js/custom.js" async></script>
+
+<!-- Google Analytics Stuff -->
+<script>
+// (function(i, s, o, g, r, a, m) {
+//     i.GoogleAnalyticsObject = r;
+//     i[r] = i[r] || function() {
+//         (i[r].q = i[r].q || []).push(arguments);
+//     }, i[r].l = 1 * new Date();
+//     a = s.createElement(o),
+//     m = s.getElementsByTagName(o)[0];
+//     a.async = 1;
+//     a.src = g;
+//     m.parentNode.insertBefore(a, m);
+// })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+// ga('create', 'UA-47903509-3', 'connyrehbein.com');
+// ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>
+

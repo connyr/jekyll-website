@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>connyrehbein
+            
+            
+               - Playing a Sound with AVAudioPlayer
+            </title>
+    <meta name="author" content="Cornelia Rehbein">
+
+    
+
+    <meta name="description" content="Tech blog, mainly about front-end and mobile development and the challenges in learning these.">
+
+    
+
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <link rel="canonical" href="/blog/2014/playing-a-sound/" />
+    <link href="" rel="alternate" title="connyrehbein" type="application/atom+xml">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link href="/custom_libs/css/homeycombs.css" rel="stylesheet">
+    <link href="/custom_libs/css/style.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="icon"
+      type="image/png"
+      href="/images/favicon_no_text.png">
+</head>
+<body>
+
+
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <!-- Fixed navbar -->
+
+
+<div class="container-fluid" id="nav-container">
+
+    <div class="col-md-6 col-md-offset-3 hidden-md hidden-lg" id="logo-col">
+        <header>
+    <a href="/">
+    <div class="text-center">
+        <h1 class="logo-font">>_ ConnyRehbein;</h1><br>
+     		tutorials, opinions and thoughts about coding
+
+    </div>
+    </a>
+</header>
+    </div>
+
+	<div class="row text-center">
+
+
+
+		<a href="/">
+
+			<div class="col-xs-3 col-md-2 menu-item
+				">
+
+
+				<div class="float-vertical">
+						<i class="fa fa-home"></i><br>
+						HOME
+				</div>
+
+
+			</div>
+		</a>
+
+		
+
+
+
+		<a href="/blog/">
+
+			<div class="col-xs-3 col-md-2 menu-item
+				
+					active
+				">
+
+
+				<div class="float-vertical">
+						<i class="fa fa-pencil"></i><br>
+						BLOG
+				</div>
+
+
+			</div>
+		</a>
+
+		
+
+				<div class="col-md-4 visible-md visible-lg" id="logo-col">
+					<header>
+    <a href="/">
+    <div class="text-center">
+        <h1 class="logo-font">>_ ConnyRehbein;</h1><br>
+     		tutorials, opinions and thoughts about coding
+
+    </div>
+    </a>
+</header>
+				</div>
+
+		
+
+
+
+		<a href="/projects/">
+
+			<div class="col-xs-3 col-md-2 menu-item
+				">
+
+
+				<div class="float-vertical">
+						<i class="fa fa-flask"></i><br>
+						LAB
+				</div>
+
+
+			</div>
+		</a>
+
+		
+
+
+
+		<a href="/about/">
+
+			<div class="col-xs-3 col-md-2 menu-item
+				">
+
+
+				<div class="float-vertical">
+						<i class="fa fa-user"></i><br>
+						ABOUT
+				</div>
+
+
+			</div>
+		</a>
+
+		
+
+
+
+	</div>
+</div>
+
+<div class="hline"></div>
+
+<div id="headline-container">
+			<div class="container">
+				<div class="row">
+						<div class="header-content">
+						<h2><span>
+							
+								Post details
+							</span></h2>
+						</div>
+				</div>
+			</div>
+</div>
+
+<div class="hline"></div>
+<!-- <div id="nav-wrap" role="navigation">
+  <h3><ul class="nav-list">
+            <li ></li>
+            <li  class="active" ></li>
+            <li ><a href="/projects/">LAB</a></li>
+            <li ><a href="/about/">ABOUT</a></li>
+  </ul>
+</h3>
+</div>   -->
+
+
+<div class="alert alert-warning" role="alert">August, 2014: This Blog is still under development. I am currently reimplementing it for the Wintersmith static site engine to replace jekyll with it. More infos on the process will follow. </div>
+
+	
+
+    <div class="container">
+	   <div class="section-content post-single">
+    <div class="post-banner">
+        <div class="inline-block">
+            <a href="/blog/2014/playing-a-sound/">
+                <img class="img-responsive icon-image" src="/images/assets/posts/icons_alarm.svg">
+                
+            </a>
+        </div>
+        <div class="inline-block">
+            <a href="/blog/2014/playing-a-sound/">
+                <h1 class="white-font imprima">Playing a Sound with AVAudioPlayer</h1>
+            </a>
+        </div>
+    </div>
+
+    <div class="post-content">
+
+        <div class="post-meta">
+            <p>
+                <csmall>Posted: 21 Feb 2014.</csmall>
+                <!-- |<csmall2>By: Conny -  Comments</csmall2> -->
+                <div><div> 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://connyrehbein.com/blog/2014/playing-a-sound/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div> </div>
+<div> <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@connyrehbein">
+
+
+  <meta name="twitter:title" content="Playing a Sound with AVAudioPlayer">
+
+
+
+  <meta name="twitter:url" content="http://connyrehbein.com/blog/2014/playing-a-sound/">
+
+
+<meta name="twitter:description" content="How to use AVAudioPlayer and AVAudioSession to play a sound. I used this in my timer app prototype to play a sound when the timer reaches zero.
+
+
+[**Use case and source in AlarmClock project on git...">
+
+
+<div class="share-button"><a href="https://twitter.com/share" data-via="connyrehbein" data-count="none"><i class="fa fa-twitter"></i></a></div>
+
+
+  <meta name="twitter:image:src" content="http://connyrehbein.com/path/to/image/logo.png">
+
+
+<script>
+! function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');
+</script>
+ </div>
+<div> <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script> </div></div>
+            </p>
+        </div>
+
+        <div class="post-content-text">
+            <p>How to use AVAudioPlayer and AVAudioSession to play a sound. I used this in my timer app prototype to play a sound when the timer reaches zero.
+<!-- more --></p>
+
+<p><a href="https://github.com/connyr/ios-projects/tree/master/Numbers/AlarmClock"><strong>Use case and source in AlarmClock project on github</strong></a></p>
+
+<p>I first imported the Audio &amp; Video Framework and add a property for the audio player</p>
+
+<pre><code>#import &lt;AVFoundation/AVFoundation.h&gt;
+@interface CRTimerViewController : UIViewController &lt;UIAlertViewDelegate&gt;
+@property(nonatomic, strong) AVAudioPlayer* audioPlayer;
+...
+</code></pre>
+
+<p>The sound file I want to play can added to the project via drag and drop or addFileToProject.</p>
+
+<p>I want to play the sound when the timer is finished and an alert view is shown.</p>
+
+<pre><code>- (void)showCountDownFinishedAlert
+{
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Timer finished"
+                                                        message:@"Dismiss to Close."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    [self playSound];
+    [alertView show];
+}
+</code></pre>
+
+<p>To play the sound:</p>
+
+<pre><code>- (void)playSound
+{
+    NSError* audioSessionError = nil;
+    AVAudioSession* audioSession = [AVAudioSession sharedInstance];
+    if ([audioSession setCategory:AVAudioSessionCategoryPlayback
+                            error:&amp;audioSessionError]) {
+        NSLog(@"Successfully set the audio session.");
+    } else {
+        NSLog(@"Could not set the audio session");
+    }
+    dispatch_queue_t dispatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(dispatchQueue, ^(void) {
+        NSBundle *mainBundle = [NSBundle mainBundle];
+        NSString *filePath = [mainBundle pathForResource:@"Annoying_Alarm_Clock-UncleKornicob"
+                                                  ofType:@"mp3"];
+        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+        NSError *audioPlayerError = nil;
+
+        self.audioPlayer = [[AVAudioPlayer alloc]
+                            initWithData:fileData
+                            error:&amp;audioPlayerError];
+
+        if (self.audioPlayer != nil){
+            if ([self.audioPlayer prepareToPlay] &amp;&amp; [self.audioPlayer play]){
+                NSLog(@"Successfully started playing.");
+            }else{
+                NSLog(@"Failed to play the audio file."); self.audioPlayer = nil;
+            }
+        }else{
+            NSLog(@"Could not instantiate the audio player.");
+        }
+    });
+}
+</code></pre>
+
+<p>First, I get a reference to the AudioSession Singleton and set the audio session category that is needed (Ambient, Playback, Record and more).</p>
+
+<p>After that, I dispatch an asynchronous process that</p>
+
+<ul>
+  <li>Loads the audio file resource</li>
+  <li>Creates the audio player</li>
+  <li>Plays the audio sound</li>
+</ul>
+
+<p>In caes you want to handle interruptions and other audio player events, you will have to implement the AVAudioPlayerDelegate protocoll and set the audioplayer delegate to your view controller.</p>
+
+<p>To stop the audio, I used the UIAlertView delegate methods to get notified when alertview gets dismissed and the sound can stop.</p>
+
+<pre><code>- (void)alertView:(UIAlertView*)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    [self.audioPlayer stop];
+    [[self getTimerView] stopTimer];
+}
+</code></pre>
+
+<p>And the final result (be happy you cannot hear the annoying sound ..)</p>
+
+<p><img class="class" src="/images/assets/2014-02-21-timer-alert.png" title="screen shot" alt="timer with alert" /></p>
+
+<p>Conny</p>
+
+
+        </div>
+
+    </div>
+
+    <div>
+        <div> 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://connyrehbein.com/blog/2014/playing-a-sound/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div> </div>
+<div> <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@connyrehbein">
+
+
+  <meta name="twitter:title" content="Playing a Sound with AVAudioPlayer">
+
+
+
+  <meta name="twitter:url" content="http://connyrehbein.com/blog/2014/playing-a-sound/">
+
+
+<meta name="twitter:description" content="How to use AVAudioPlayer and AVAudioSession to play a sound. I used this in my timer app prototype to play a sound when the timer reaches zero.
+
+
+[**Use case and source in AlarmClock project on git...">
+
+
+<div class="share-button"><a href="https://twitter.com/share" data-via="connyrehbein" data-count="none"><i class="fa fa-twitter"></i></a></div>
+
+
+  <meta name="twitter:image:src" content="http://connyrehbein.com/path/to/image/logo.png">
+
+
+<script>
+! function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');
+</script>
+ </div>
+<div> <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script> </div>
+    </div>
+</div>
+
+    </div>
+
+<!-- *****************************************************************************************************************
+     FOOTER
+     ***************************************************************************************************************** -->
+<div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About</h4>
+                <div class="hline-w"></div>
+                <p>Hi, <a href="/about/">I’m Conny. </a>I study Software Engineering and love to work on App Development in my free time. Have a look around and please don’t hesitate to <a href="mailto:contact@connyrehbein.com">contact me</a> with any comments, questions, or just to say hello!</p>
+
+            </div>
+            <div class="col-lg-4 text-center">
+                <h4>Get in Touch</h4>
+                <div class="hline-w"></div>
+                <p>
+                    <a href="https://twitter.com/connyrehbein"><i class="fa fa-twitter"></i></a>
+
+                    <a href="http://github.com/connyr"><i class="fa fa-github"></i></a>
+
+                    <a href="http://de.linkedin.com/pub/cornelia-rehbein/39/262/aa5/en"><i class="fa fa-linkedin"></i></a>
+
+                    <!-- <a href="mailto:contact@connyrehbein.com"><i class="fa fa-envelope-o"></i></a> -->
+
+                    <a href="https://www.facebook.com/conny.rehbein"><i class="fa fa-facebook"></i></a>
+
+                    <a href="https://plus.google.com/u/2/+CorneliaRehbein"><i class="fa fa-google-plus"></i></a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <div class="hline-w"></div>
+                <p>
+                    <a href="mailto:contact@connyrehbein.com">Contact</a>
+                    <br/>
+                    <a href="/impressum/">Legal Disclosure</a>
+                    <br/>
+                    <a href="/privacy_statement/">Privacy Statement</a>
+                    <br/>
+                    <a href="/sitemap.xml">Sitemap</a>
+                    <br/>
+                </p>
+            </div>
+
+        </div>
+        <div class="text-center" style="color:white;">
+            Copyright &copy; 2014 Cornelia Rehbein - Made with Bootstrap, Jekyll and .
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+</div>
+<! --/footerwrap -->
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script scr="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script src="/custom_libs/bower/masonry/dist/masonry.pkgd.min.js" async></script>
+<script src="/custom_libs/js/jquery.homeycombs.js" async></script>
+
+<script src="/custom_libs/js/custom.js" async></script>
+
+<!-- Google Analytics Stuff -->
+<script>
+// (function(i, s, o, g, r, a, m) {
+//     i.GoogleAnalyticsObject = r;
+//     i[r] = i[r] || function() {
+//         (i[r].q = i[r].q || []).push(arguments);
+//     }, i[r].l = 1 * new Date();
+//     a = s.createElement(o),
+//     m = s.getElementsByTagName(o)[0];
+//     a.async = 1;
+//     a.src = g;
+//     m.parentNode.insertBefore(a, m);
+// })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+// ga('create', 'UA-47903509-3', 'connyrehbein.com');
+// ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>
+
