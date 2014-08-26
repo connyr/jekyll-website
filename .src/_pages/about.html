@@ -7,7 +7,7 @@ pagetitle: 'About the author'
 <!-- ***************************************************
 Header
 ******************************************************** -->
-<div class="section-container">
+<div class="section-container about-page">
     <h1 class="centered topic-header">Hi. I'm Conny.</h1>
 
 <div class="container">
@@ -17,7 +17,7 @@ Header
         </div>
         <div class="col-sm-6">
             <p>
-                I'm currently studying for my master's degree at the <a href="http://www.hpi.uni-potsdam.de/willkommen.html?L=1">Hasso Plattner Institute </a>in the <a href="http://www.hpi.uni-potsdam.de/hpi/organisation/stiftungsidee.html?L=1">IT Systems Engineering</a> program and am working my master's thesis.</p>
+                I'm currently studying for my master's degree at the <a href="http://www.hpi.uni-potsdam.de/willkommen.html?L=1">Hasso Plattner Institute </a>in the <a href="http://www.hpi.uni-potsdam.de/hpi/organisation/stiftungsidee.html?L=1">IT Systems Engineering</a> program and am working on my master's thesis.</p>
 <!--             <p>
                 In 2012 I interned for a year at <a href="http://global.gsap.com/about-sap/company/saplabs/index.epx">SAP Labs</a> in Palo Alto, California, and had the opportunity to work on mobile applications.
             </p> -->
@@ -36,7 +36,7 @@ Header
 General Information
 ******************************************************** -->
 <div class="section-container white-dashed-section">
-    <h3 class="centered topic-header">SOME DETAILS</h3>
+    <h3 class="centered topic-header">Some Details</h3>
 
 
     <div class="container">
@@ -49,7 +49,7 @@ General Information
                     <br><i class="fa fa-book"></i>
                 </h3>
                 <p>My full name is Cornelia Rehbein. Born and raised in <a href="">Frankfurt Oder, Germany</a>, I graduated from the <a title="Hasso Plattner Institute" href="http://www.hpi.uni-potsdam.de/willkommen.html?L=1">Hasso Plattner Institut</a> with a B.Sc. degree and am now working towards a M.Sc. degree in <a title="IT Systems Engineering" href="http://www.hpi.uni-potsdam.de/hpi/organisation/stiftungsidee.html?L=1">IT Systems Engineering</a>. My resume is available on <a href="http://www.linkedin.com/pub/cornelia-rehbein/39/262/aa5/en">LinkedIn</a>.</p>
-                <div class="hline"></div>
+
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div>
@@ -59,8 +59,8 @@ General Information
                 <h3 class="topic-header">Experience
                     <br><i class="fa fa-road"></i>
                 </h3>
-                <p>I've worked as a research assistant on projects involving 3D Point Clouds, <a href="http://www.hpi.uni-potsdam.de/doellner/research/geovis.html#c17214">3D Point Cloud Analysis</a> and <a href="http://www.hpi.uni-potsdam.de/doellner/research/geovis.html#c17227">3D Model Generalization</a> at the <a href="http://www.hpi.uni-potsdam.de/willkommen.html?L=1">institute</a>. Between 2011 and 2012, I interned at <a href="http://www.lenskart.com">SAP Labs</a> in Palo Alto, California for a year where I developed applications for mobile devices. At the moment, I am working on a research project that involves <a href="http://en.wikipedia.org/wiki/Natural_language_processing">natural language query processing</a>.</p>
-                <div class="hline"></div>
+                <p>I've worked as a research assistant on projects involving 3D Point Clouds, <a href="http://www.hpi.uni-potsdam.de/doellner/research/geovis.html#c17214">3D Point Cloud Analysis</a> and <a href="http://www.hpi.uni-potsdam.de/doellner/research/geovis.html#c17227">3D Model Generalization</a> at the <a href="http://www.hpi.uni-potsdam.de/willkommen.html?L=1">institute</a>. Between 2011 and 2012, I interned at <a href="http://www.lenskart.com">SAP Labs</a> in Palo Alto, California for a year where I developed applications for mobile devices.
+
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div style="background-color:white">
@@ -71,7 +71,7 @@ General Information
                     <br><i class="fa fa-laptop"></i>
                 </h3>
                 <p>In general, I am more interested in front-end development than backend, but I experienced both sites. I currently enjoy building mobile applications and user-facing web apps. Recently, I've also become interested in <a href="http://en.wikipedia.org/wiki/Natural_language_processing">natural language processing</a>. Most of my time is spent on personal projects, on <a href="https://github.com/connyr">github</a> and on reddit and twitter.</p>
-                <div class="hline"></div>
+
             </div>
         </div>
         <! --/row -->
@@ -83,9 +83,10 @@ General Information
 Interactive Widgets
 ******************************************************** -->
 <div class="hline"></div>
+<h3 class="centered topic-header">Get in Touch</h3>
+<div class="section-container" id="about-get-in-touch">
 
-<div class="section-container ">
-    <h3 class="centered topic-header">GET IN TOUCH</h3>
+    {% include info/contact_icons.html %}
 </div>
 
 <!-- social widgets -->
@@ -95,17 +96,24 @@ Interactive Widgets
 Activities
 ******************************************************** -->
 
-<div class="section-container white-dashed-section">
-    <h3 class="centered topic-header">ACTIVITIES</h3>
+<div id="activity-section" class="section-container white-dashed-section">
+    <h3 class="centered topic-header">Activities</h3>
 
     <div class="container-fluid">
         <div class="row">
 
             <div class="col-sm-4">
+            <h3>Twitter</h3>
                     {% include info/twitter_timeline.html %}
             </div>
             <div class="col-sm-4">
-                <a href="https://www.codeschool.com/users/855654">CodeSchool Activities</a>
+              <h3>Reading</h3>
+                {% include info/goodreads_activity.html %}
+            </div>
+            <div class="col-sm-4">
+            <h3>Other activities</h3>
+
+                <a href="https://www.codeschool.com/users/855654"><img src="/images/codeschool.png"></a>
             </div>
 
         </div>
