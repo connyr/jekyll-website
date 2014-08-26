@@ -185,15 +185,25 @@ a:focus {
 /* Header */
 
 .topic-header{
-	padding-bottom: 2em;
-	padding-top: 2em;
+	padding-bottom: 1.5em;
+	padding-top: 1.5em;
 	font-family: "Love Ya Like A Sister", sans-serif;
 }
 
 
 /* section with title */
 .section-container{
-	padding: 5% 5%;
+	padding: 1em;
+  padding-bottom: 50px;
+}
+
+#about-get-in-touch {
+  font-size:3em;
+  text-align: center;
+}
+
+#about-get-in-touch a {
+  padding: 0 1em;
 }
 
 
@@ -201,6 +211,9 @@ a:focus {
 	margin: 5em auto 0;
 }
 
+#activity-section h3{
+  text-align: center;
+}
 
 
 /******* Recent posts *******/

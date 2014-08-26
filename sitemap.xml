@@ -4,13 +4,13 @@
 	<!-- Site/Blog Indexes -->
 	<url>
 		<loc>http://connyrehbein.com</loc>
-		<lastmod>2014-08-25T14:57:19+02:00</lastmod>
+		<lastmod>2014-08-26T10:42:38+02:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://connyrehbein.com/blog/</loc>
-		<lastmod>2014-08-25T14:57:19+02:00</lastmod>
+		<lastmod>2014-08-26T10:42:38+02:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -74,31 +74,31 @@
 	<!-- Pages -->
 	<url>
 		<loc>http://connyrehbein.com/about/</loc>
-		<lastmod>2014-08-25T14:57:19+02:00</lastmod>
+		<lastmod>2014-08-26T10:42:38+02:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>http://connyrehbein.com/contact/</loc>
-		<lastmod>2014-08-25T14:57:19+02:00</lastmod>
+		<lastmod>2014-08-26T10:42:38+02:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>http://connyrehbein.com/impressum/</loc>
-		<lastmod>2014-08-25T14:57:19+02:00</lastmod>
+		<lastmod>2014-08-26T10:42:38+02:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>http://connyrehbein.com/privacy_statement/</loc>
-		<lastmod>2014-08-25T14:57:19+02:00</lastmod>
+		<lastmod>2014-08-26T10:42:38+02:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>http://connyrehbein.com/projects/</loc>
-		<lastmod>2014-08-25T14:57:19+02:00</lastmod>
+		<lastmod>2014-08-26T10:42:38+02:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
